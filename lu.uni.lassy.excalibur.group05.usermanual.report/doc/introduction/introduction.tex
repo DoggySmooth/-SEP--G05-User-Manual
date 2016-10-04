@@ -1,4 +1,7 @@
 \chapter{Introduction}
+\usepackage{glossaries}
+\makeglossaries
+\newglossaryentry{myTerm1}{name={ABC1},description={my Term description}}
 \label{chap:introduction}
 
 \section{Scope}
@@ -6,10 +9,10 @@ This section has to provide the scope of the user's manual document.
 In the following some opening statements to use when providing the
 information corresponding to this section.
 
-This document provides \ldots
+This document provides the basic knowledge to use SHEAVY \ldots
 %Example: This document provides minimum acceptable information for knowing how
 % to use the software system \mysystemname.
-
+\gls{myTerm1} 
 
 This document does not \ldots 
  
@@ -69,5 +72,6 @@ notation (i.e. description of formats and conventions) must also be provided.
 
 
 
-
+\glsaddall
+\printglossaries
 

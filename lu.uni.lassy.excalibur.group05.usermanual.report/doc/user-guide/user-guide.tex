@@ -57,14 +57,44 @@ different stages of the process while its is performed by the actor.
 Common procedures to several actors are grouped in this section to avoid
 redundancy.
 
-\subsection{MyCommonProcedure1}
+\subsection{TriggerAlert}
+written version need to be copied here..
 
 \subsection{MyCommonProcedure2}
 
 
-\section{My-Actor1 procedures}
+\section{Medical Department}
 
-\subsection{MyProcedure1}
+\subsection{Handling of infected patient}
+
+\vspace{0.5cm}
+\hrule
+\vspace{0.5cm}
+\begin{lyxlist}{UC1}
+\small{
+\item [\textbf{Use~Case:}] HandlingOfInfectedPatient
+\item [\textbf{Scope:}] Crisis Management System (\emph{CMS})
+\item [\textbf{Primary Actor}:] Medical Department
+\item [\textbf{Secondary Actor}:] None
+\item [\textbf{Intention:}]The Medical Department intends to update
+the application with the newest data about infected people, no matter what
+sickness they have. In case of a known epidemic infection, keep an updated
+record of the growth of the epidemic.
+\item [\textbf{Level}:]Subfunctional level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. The Medical Department performs a medical check on a patient.\\
+2. The Medical Department sends data about that patient to the application.\\
+3. If the patient shows signs of an infection that is an already known epidemic infection, his data
+and location will be automatically updated on the data center part dedicated to
+this matter and also notify on SHeavy.\\
+4. If the patient shows signs of an unknown infection the medical Department
+will proceed on taking a sample of blood for further testing.\\
+5. The Medical sends the sample to the nearest laboratory in order to find a
+cure.\\
+}
+\end{lyxlist}
+\hrule
+\vspace{0.5cm} 
 
 \subsection{MyProcedure2}
 

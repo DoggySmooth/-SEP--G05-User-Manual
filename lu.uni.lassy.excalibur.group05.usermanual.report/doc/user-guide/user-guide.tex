@@ -57,11 +57,66 @@ different stages of the process while its is performed by the actor.
 Common procedures to several actors are grouped in this section to avoid
 redundancy.
 
-\subsection{TriggerAlert}
-written version need to be copied here..
+\subsection{Trigger the alert state}
 
-\subsection{MyCommonProcedure2}
+\vspace{0.5cm}
+\hrule
+\vspace{0.5cm}
+\begin{lyxlist}{UC1}
+\small{
+\item [\textbf{Use~Case:}] TriggerAlertState
+\item [\textbf{Scope:}] Crisis Management System (\emph{CMS})
+\item [\textbf{Primary Actor}:] Medical Department, Military Department,
+Government
+\item [\textbf{Secondary Actor}:] None
+\item [\textbf{Intention:}] According to the diagnostic or decision of one of
+the primary actors, an alert will will send a notification to SHeavy about a
+possible epidemic.
+\item [\textbf{Level}:]Subfunctional level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. Medical Department finds out that an epidemic is possible. They will
+immediately send a confirmed notification to SHeavy.\\
+2. Military Department finds out that an epidemic is possible. They will
+immediately send a confirmed notification to SHeavy.\\
+3. The Government finds out that an epidemic is possible. They will
+immediately send a confirmed notification to SHeavy.\\
+}
+\end{lyxlist}
+\hrule
+\vspace{0.5cm} 
 
+\subsection{Lift the alert state}
+
+\vspace{0.5cm}
+\hrule
+\vspace{0.5cm}
+\begin{lyxlist}{UC1}
+\small{
+\item [\textbf{Use~Case:}] LiftAlertState
+\item [\textbf{Scope:}] Crisis Management System (\emph{CMS})
+\item [\textbf{Primary Actor}:] Medical Department, Military Department,
+Government
+\item [\textbf{Secondary Actor}:] None
+\item [\textbf{Intention:}] According to the diagnostic or decision of one of
+the primary actors, an alert will will send a notification to SHeavy about a
+possible epidemic.
+\item [\textbf{Level}:]Subfunctional level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. Medical Department notices that the epidemic is over or that the
+diagnostic was not right. They will immediately send a notification to SHeavy
+to lift the alert.\\
+2. Military Department finds out that an epidemic is over or that their
+information was not right. They will immediately send a notification to SHeavy
+to lift the alert.\\
+3. The Government finds out that an epidemic is over or that their
+information was not right. They will immediately send a notification to SHeavy
+to lift the alert.\\
+4. The system will automatically lift the pre-alert if the alert notification
+was not confirmed. For example due to a misclick or misfunction of the system.\\
+}
+\end{lyxlist}
+\hrule
+\vspace{0.5cm} 
 
 \section{Medical Department}
 

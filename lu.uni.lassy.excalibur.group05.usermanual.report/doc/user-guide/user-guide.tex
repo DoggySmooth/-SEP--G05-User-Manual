@@ -65,8 +65,7 @@ redundancy.
 \small{
 \item [\textbf{Use~Case:}] TriggerAlertState
 \item [\textbf{Scope:}] Crisis Management System (\emph{CMS})
-\item [\textbf{Primary Actor}:] Medical Department, Military Department,
-Government
+\item [\textbf{Primary Actor}:] Medical Department, Government
 \item [\textbf{Secondary Actor}:] None
 \item [\textbf{Intention:}] According to the diagnostic or decision of one of
 the primary actors, an alert will will send a notification to SHeavy about a
@@ -92,8 +91,7 @@ immediately send a confirmed notification to SHeavy.\\
 \small{
 \item [\textbf{Use~Case:}] LiftAlertState
 \item [\textbf{Scope:}] Crisis Management System (\emph{CMS})
-\item [\textbf{Primary Actor}:] Medical Department, Military Department,
-Government
+\item [\textbf{Primary Actor}:] Medical Department, Government
 \item [\textbf{Secondary Actor}:] None
 \item [\textbf{Intention:}] According to the diagnostic or decision of one of
 the primary actors, an alert will will send a notification to SHeavy about a
@@ -116,7 +114,33 @@ was not confirmed. For example due to a misclick or misfunction of the system.\\
 \hrule
 \vspace{0.5cm} 
 
-\section{Medical Department}
+\subsection{Alert Assessements}
+\vspace{0.5cm}
+\hrule
+\vspace{0.5cm}
+\begin{lyxlist}{UC1}
+\small{
+\item [\textbf{Use~Case:}] AlertAssessements
+\item [\textbf{Scope:}] Crisis Management System (\emph{CMS})
+\item [\textbf{Primary Actor}:] Medical Department, Government
+\item [\textbf{Secondary Actor}:] None
+\item [\textbf{Intention:}] After the recognition of an possible epidemic, the
+concerned primary, which is going to trigger the alert, will rate the epidemic
+in a color-scale (orange or red).\\
+\item [\textbf{Level}:]Analyse level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. If there are some cases of an epidemic, the concerned primary actor willl
+trigger the orange level alert.\\
+2. If the epidemic is already spread out or infected person percentage is
+greater than 1/4 of the country's population then the concerned primary actor
+will trigger the red level alert.\\
+3. The green level alert is triggered per default in other words there's no
+epidemic.\\ }
+\end{lyxlist}
+\hrule
+\vspace{0.5cm} 
+
+\section{Medical Department procedures}
 
 \subsection{Handling of infected patient}
 \vspace{0.5cm}

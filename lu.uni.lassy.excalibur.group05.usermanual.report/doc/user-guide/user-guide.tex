@@ -140,6 +140,70 @@ epidemic.\\ }
 \hrule
 \vspace{0.5cm} 
 
+\subsection{Update Map after Alert State}
+\vspace{0.5cm}
+\hrule
+\vspace{0.5cm}
+\begin{lyxlist}{UC1}
+\small{
+\item [\textbf{Use~Case:}] AlertAssessements
+\item [\textbf{Scope:}] Crisis Management System (\emph{CMS})
+\item [\textbf{Primary Actor}:] Medical Department, Government
+\item [\textbf{Secondary Actor}:] None
+\item [\textbf{Intention:}] Update the map and GPS accordingly to 
+the confirmation of a change of zones\\
+\item [\textbf{Level}:]Sub-functional level
+\item [\textbf{Main~Success~Scenario}]:\\
+1.	The Medical Department and/or the Military Department uses the TriggerAlertState
+ or LiftAlertState and the Government confirms the change of state.\\
+2.	SHeavy receives that the state of a city or region is changed to a zone
+type.\\
+3.	SHeavy updates the map and GPS accordingly to the alert message.\\
+4.	SHeavy sent a message to the Medical Department, Military Department and Government 
+that the state has changed.\\
+5.	SHeavy sent an alert message to the Common User in order to inform this
+change.\\
+Extensions:\\
+	3.a The state of a city or region is set or changed to Safe, Unsafe or
+	Danger.\\
+		3.a.1 After the TriggerAlertState or LiftAlertState, Sheavy receives the
+		state.\\
+		3.a.2 SHeavy uses that information to set new zones and update the map and
+		GPS.\\
+}
+\end{lyxlist}
+\hrule
+\vspace{0.5cm} 
+
+\subsection{Set/Change Zone State}
+\vspace{0.5cm}
+\hrule
+\vspace{0.5cm}
+\begin{lyxlist}{UC1}
+\small{
+\item [\textbf{Use~Case:}] SetZoneState
+\item [\textbf{Scope:}] Crisis Management System (\emph{CMS})
+\item [\textbf{Primary Actor}:] Medical Department, Government
+\item [\textbf{Secondary Actor}:] None
+\item [\textbf{Intention:}] Set or change the state of a zone 
+after the confirmation of the Government.\\
+\item [\textbf{Level}:]Sub-functional level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. After the TriggerAlertState or LiftAlertState, the Government confirms
+ the respective state of a zone: Safe, Unsafe, Danger.\\
+2. The state of zone is also received by SHeavy.\\
+3. SHeavy sets the state to a new zone or changes the state of a current zone to 
+the respective new state.\\
+4. SHeavy updates the state of that zone in the database that updates any
+corresponding functions of the application.\\
+5. SHeavy notifies the Medical Department and the Military Department that a new 
+region has the corresponding state or that an existing region changed his state
+to the new state.\\
+}
+\end{lyxlist}
+\hrule
+\vspace{0.5cm} 
+
 \section{Medical Department procedures}
 
 \subsection{Handling of infected patient}
@@ -172,17 +236,62 @@ cure.\\
 \hrule
 \vspace{0.5cm} 
 
-\subsection{MyProcedure2}
+\section{Common users procedures}
 
-\section{My-Actor2 procedures}
-\subsection{MyProcedure1}
-\subsection{MyProcedure2}
+\subsection{Alert while entering a Danger Zone}
+\vspace{0.5cm}
+\hrule
+\vspace{0.5cm}
+\begin{lyxlist}{UC1}
+\small{
+\item [\textbf{Use~Case:}] DangerAlert
+\item [\textbf{Scope:}] Crisis Management System (\emph{CMS})
+\item [\textbf{Primary Actor}:] Common user
+\item [\textbf{Secondary Actor}:] None
+\item [\textbf{Intention:}]Warn a user that he is about to enter a Danger Zone 
+before entering the Danger Zone.
+\item [\textbf{Level}:]Sub-functional level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. The common user is going somewhere in or near a Danger Zone to do
+something.\\
+2. The common user is located by SHeavy and John is near a Danger Zone and is
+going in its direction.\\
+3. SHeavy immediately send a warning to John's Phone, indicating 
+that John is entering a Danger Zone.\\
+4. The common user sees the warning and he takes a way around the Danger Zone.\\
+}
+\end{lyxlist}
+\hrule
+\vspace{0.5cm} 
 
+\section{System procedures}
+\subsection{Finding safe route}
+\vspace{0.5cm}
+\hrule
+\vspace{0.5cm}
+\begin{lyxlist}{UC1}
+\small{
+\item [\textbf{Use~Case:}] FindSafe
+\item [\textbf{Scope:}] Crisis Management System (\emph{CMS})
+\item [\textbf{Primary Actor}:] System
+\item [\textbf{Secondary Actor}:] Common User
+\item [\textbf{Intention:}]Suggest the user the safest way to get to a safe
+place (e.g. hospital)
+\item [\textbf{Level}:]Sub-functional level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. The common user is going to a safe place and uses the GPS of SHeavy.\\
+2. SHeavy calculates the fastest way to the indicated place.\\
+3. SHeavy shows the safest way from the GPS to John.\\
+Extensions:\\
+2.a SHeavy calculates the fastest way avoiding Unsafe and Danger Zones.\\
+	2.a.1 SHeavy ignores any way through an Unsafe/Danger Zone.\\
+	2.a.2 SHeavy calculates the fastest way from the non-ignored ways.\\
+\item 
+}
+\end{lyxlist}
+\hrule
+\vspace{0.5cm}  
 
-\section{My-Actor3 procedures}
-
-\subsection{MyProcedure1}
-\subsection{MyProcedure2}
 
 
 

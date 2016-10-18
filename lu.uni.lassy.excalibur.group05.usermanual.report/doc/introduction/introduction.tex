@@ -3,63 +3,39 @@
 \label{chap:introduction}
 
 \section{Scope}
-This section has to provide the scope of the user's manual document.
-In the following some opening statements to use when providing the
-information corresponding to this section.
-
-This document provides the basic knowledge to use SHEAVY \ldots
-%Example: This document provides minimum acceptable information for knowing how
-% to use the software system \mysystemname.
-
-
-This document does not explain how it was implemented\ldots 
- 
-This document is not intended to explain the functionalities behind SHEAVY\ldots
-%Example: This document is not intended to provide information about how to
-% connect, deploy, configure, or use any external device o
-% third-party software system that is rqeuired for the correct funcitoning of
-% \mysystemname.
-
- 
-This document may be used with \ldots
-%This document may be used with other documents provided by third-party
-% companies to have an overall view and correct understanding of the environment
-% and procedures where the software system \mysystemname is aimed to be deployed
-% and run.
-
-
-
+SHEAVY is a consitent tool to handle and manage an epidemic in an efficient way.
+SHEAVY can be used worldwide working together with infrastrucutres like
+gouvernements, health organisations and hospitals. This document's goal is to
+provide the basic knowledge to use SHEAVY. There is no source code or
+programming aspect in this file. \\
 
 \section{Purpose}
-In this section you explain the purpose (i.e. aim, objectives) of the user's
-manual. In the following some examples of opening statements to be used in this
-section.
-
-The purpose of this document is to show the users how to use SHEAVY and
-understand it's interface\ldots
-
-This document defines clear usages of SHEAVY \ldots
-
-This document is meant to help the users have their first approach with
-the system SHEAVY\ldots
+The user manual guide was written to show how different users can acces to the
+system and to understand its workflow.\\
 
 
 
 \section{Intended audience}
-Description of the categories of persons targeted by this document together with the description of how they are expected to exploit the content of the document.
 EXTERIOR: All person which isn't involved with the crisis management will have a
-simple guideline to access to the newss published in the application.
+simple guideline to access to the news published in the application.\\
+\\
 INTERIOR: All person activly helping controling the crisis will have a overall
 view of the interface. They will know where to find which information. Our
 contact list search will be explained to let them find anybody easily, person or
-institution.
+institution.\\
 
-\section{mysystemname}
-Brief overview of the software application domain and main purpose.
-Our app is a epidemic crisis management web based project. Data from different
+\section{SHeavy}
+SHEAVY is an epidemic crisis management web based tool. Data from different
 sources will be fetched together to centralize all the known statuses and
-information of the crisis in some simple clicks. Allowing to find someone
-easily. Realtime view of the ressources locations and distributions.
+information of the crisis in some simple clicks. Its also a searchtool to find
+someone involved in the crisis easily and trough a realtime view interface, it
+will be fast to know how the ressources are distributed. A feature will alert
+the users of an important message. It keeps also track of the locations of the
+users to\\
+\begin{description}
+ \item[1.] Prevent them accessing an unauthorized zone
+ \item[2.] Guide them with GPS to secure zones.
+\end{description}
 
 \subsection{Actors \& Functionalities}
 SHeavy has different functionalities for several Actors. Here is an overview.\\
@@ -67,22 +43,72 @@ SHeavy has different functionalities for several Actors. Here is an overview.\\
 \subsubsection{Common Users}
 A common user is defined as an end user who uses SHeavy only in order to
 collect information about the possible epidemic and uses the given information
-to avoid the infection.
+to avoid the infection.\\
 \begin{description}
  \item[$\bullet$] Common users are the principle target of SHeavy. They are
- going to use the application in order to reach information about the possible
- epidemic andfollow the instructions given by Sheavy.
+ going to use the application in order to reach information about a possible
+ or several epidemic and follow the instructions given by SHeavy. Common users will get warnings if accessing an infected
+zone by gps tracking. They will have paths to follow to access and find the
+safe zones.
 \end{description}
 
+\section{Creator procedures}
+
+The Creator only has one main function which is to set in place the system to
+handle an epidemical crisis. He has to make sure every actor can access it and
+keep it accessible as well as maintained and updated.\\
+\begin{description}
+ \item[$\bullet$] Create and set up the system.
+\end{description} 
+
+\subsubsection{Chief}
+The chief is a designed person to be responsable of a action group in a specific
+domain e.g. Medic or Military.\\
+\begin{description}
+ \item[$\bullet$] Has to inform whenever he's affected to a mission, where his
+ team location is.
+\end{description} 
+
 \subsubsection{Coordinators}
-The Coordinator is an intermediate between all the Actors and the system. He has
-several main functions such as to keep the system functional and updated.
+The Coordinator is an intermediate between all the Actors and the System. He has
+several main functions such as to keep the system functional and updated.\\
 \begin{description}
  \item[$\bullet$] Maintain the system operational: The Coordinator's main task
  is to keep the system operational.
  \item[$\bullet$] If necessary he will perform some improvements and bugs
  corrections on the system and also keep the system maintained and updated.
 \end{description} 
+
+\subsubsection{Medical Departement}
+The Medical Departement is subdivied in two groups. The laboratory and the
+Doctors. They have the duty to recognize an epidemic and send the alert
+statement that enter the population in crisis. They will work together to stop
+the epidemic.\\
+\begin{description}
+ \item[$\bullet$] Gives the alert of the beginning of an epidemic.
+ \end{description} 
+
+\subsubsection{Laboratory}
+The Laboratory is a medical group which goal is to find a cure to the virus. In
+constant collaboration with different medical chiefs they will get relevant
+information of the evolution of the epidemic in realtime. They also get the
+blood samples and reports from the doctors.\\
+\begin{description}
+ \item[$\bullet$] Analizing the blood samples to isolate the virus and demantle
+ its structure to provide an antivirus.
+ \item[$\bullet$] Gives a guideline to the application as a news so that all the
+ people knows how to protect itself from become infected.
+ \end{description} 
+
+\subsubsection{Doctors}
+Doctors are in charge of providing the antidote to the patients. They will be on
+site to care of the infected people. \\
+\begin{description}
+ \item[$\bullet$] Write Reports that will be sent to the laboratory.
+ \item[$\bullet$] Take care of the ill people the time that an antivirus is
+ found.
+ \item[$\bullet$] Test antiviruses and report if it's effective or not.
+ \end{description} 
 
 \subsubsection{Government Departement}
 The Government Departement is divided into two divisions. Both Central
@@ -104,7 +130,7 @@ wide.\\
 \subsubsection{Military Departement}
 The Military Departement are responsible for the security of all zones and also
 to reduce the panic for organisational and colaborational purposes. They
-represent the strength of the Government.
+represent the strength of the Government.\\
 \begin{description} 
  \item[$\bullet$]They are responsible for the security of all zones.
  \item[$\bullet$]In order to avoid riot they have to make sure that everyone are
@@ -114,14 +140,53 @@ represent the strength of the Government.
 \end{description}  
 
 \subsection{Operating environment}
-Brief overview of the infrastructure on which the software is deployed and used.
-Our system is implemented on a securized server from IBM.
+SHEAVY is a webbased application. It has a server and a client side. The server
+needs to be powerfull to handle the mass of information. Clients need to have a
+good internet access and a basic system requirement to access fast their
+pages.\\
+
+\subsubsection{System requirements: Client}
+\begin{tabular}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{\textbf{Phone Application}} \\
+\hline
+\multicolumn{2}{|c|}{\textit{\textbf{Android}}} \\
+\hline
+OS & Android \\
+\hline
+Hardware & ARM 5 Dual Core \\
+\hline
+\multicolumn{2}{|c|}{\textit{\textbf{iOS}}} \\
+\hline
+Operating System & iOS 8 \\
+\hline
+Hardware & iPhone 5 \\
+\hline
+\end{tabular}
+
+\subsubsection{System requirements: Server}
+\begin{tabular}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{\textbf{Server Application}} \\
+\hline
+\multicolumn{2}{|c|}{\textit{\textbf{Linux x86/x64}}} \\
+\hline
+Kernel & 4.8.1 \\
+\hline
+Hard disk space & 10 TB   \\
+\hline
+Processeur & Intel Xeon E7-8893 \\
+\hline
+RAM & 32 GB \\
+\hline
+\end{tabular}
 
 \section{Document structure}  
 Information on how this document is organised and it is expected to be
 used. Recommendations on which members of the audience
 should consult which sections of the document, and explanations about the used
-notation (i.e. description of formats and conventions) must also be provided.
+notation (i.e. description of formats and conventions) must also be provided.\\
+
 
 
 

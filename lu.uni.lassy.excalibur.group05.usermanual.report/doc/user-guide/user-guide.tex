@@ -34,8 +34,6 @@ template \cite{armour01usecase} \textbf{BUT its content must be as low level as 
 4. \emph{Bob} informs to the \emph{CMS} of his arrival.\\
 5. \emph{Bob} executes the mission.\\
 6. \emph{Bob} informs to the \emph{CMS} the mission outcome.
-
-
 \item [\textbf{Extensions}]:\\
 2.a None internal worker can execute the mission.\\
 \hspace*{0.5cm} 2.a.1 \emph{CMS} requests an external resource to \emph{ERS}.\\
@@ -56,6 +54,70 @@ different stages of the process while its is performed by the actor.
 \section{Actors common procedures}
 Common procedures to several actors are grouped in this section to avoid
 redundancy.
+
+\subsection{Login}
+\vspace{0.5cm}
+\hrule
+\vspace{0.5cm}
+\begin{lyxlist}{UC1}
+\small{
+\item [\textbf{Use~Case:}] LoginAttempt
+\item [\textbf{Scope:}] Crisis Management System (\emph{CMS})
+\item [\textbf{Primary Actor}:] Medical Department, Government
+\item [\textbf{Secondary Actor}:] None
+\item [\textbf{Intention:}] Log in the user to fit in his function role.
+\item [\textbf{Level}:]Sub-functional level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. A user need to login with his credidentials and password to access the
+professional view of the application// 
+}
+\end{lyxlist}
+\hrule 
+\vspace{0.5cm} 
+
+\subsection{Send a Requirment Notice}
+\vspace{0.5cm}
+\hrule
+\vspace{0.5cm}
+\begin{lyxlist}{UC1}
+\small{
+\item [\textbf{Use~Case:}] SendNotice
+\item [\textbf{Scope:}] Crisis Management System (\emph{CMS})
+\item [\textbf{Primary Actor}:] Medical Department, Government
+\item [\textbf{Secondary Actor}:] None
+\item [\textbf{Intention:}] Inform specific Departement a need with its
+location.
+\item [\textbf{Level}:]Sub-functional level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. A Professional user can sent a requirment query to a specific user group
+f.e. Medics with a comment to explain his needs and the respectiv groups will
+be informed. \\
+}
+\end{lyxlist}
+\hrule 
+\vspace{0.5cm} 
+
+
+\subsection{Find a Person}
+\vspace{0.5cm}
+\hrule
+\vspace{0.5cm}
+\begin{lyxlist}{UC1}
+\small{
+\item [\textbf{Use~Case:}] FindPerson
+\item [\textbf{Scope:}] Crisis Management System (\emph{CMS})
+\item [\textbf{Primary Actor}:] Medical Department, Military Department,
+Government
+\item [\textbf{Secondary Actor}:] None
+\item [\textbf{Intention:}] Find easily a involved person to call
+\item [\textbf{Level}:]Sub-functional level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. A Professional user can find people by name, by availablity or by his
+function and call them.\\
+}
+\end{lyxlist}
+\hrule 
+\vspace{0.5cm} 
 
 \subsection{Trigger the alert state}
 \vspace{0.5cm}
@@ -204,6 +266,26 @@ to the new state.\\
 \hrule
 \vspace{0.5cm} 
 
+\section{Creator procedures}
+
+\subsection{System Creation}
+\vspace{0.5cm}
+\hrule
+\vspace{0.5cm}
+\begin{lyxlist}{UC1}
+\small{
+\item [\textbf{Use~Case:}] SystemCreation
+\item [\textbf{Scope:}] Crisis Management System (\emph{CMS})
+\item [\textbf{Primary Actor}:] Creator
+\item [\textbf{Secondary Actor}:] None
+\item [\textbf{Intention:}] The intention of the Creator is to set in place the system made to handle a epidemical crisis. 
+\item [\textbf{Level}:]Subfunctional level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. The system is set up.// }
+\end{lyxlist}
+\hrule 
+\vspace{0.5cm} 
+
 \section{Medical Department procedures}
 
 \subsection{Handling of infected patient}
@@ -214,8 +296,8 @@ to the new state.\\
 \small{
 \item [\textbf{Use~Case:}] HandlingOfInfectedPatient
 \item [\textbf{Scope:}] Crisis Management System (\emph{CMS})
-\item [\textbf{Primary Actor}:] Medical Department
-\item [\textbf{Secondary Actor}:] None
+\item [\textbf{Primary Actor}:] Doctor
+\item [\textbf{Secondary Actor}:] Labotatory
 \item [\textbf{Intention:}]The Medical Department intends to update
 the application with the newest data about infected people, no matter what
 sickness they have. In case of a known epidemic infection, keep an updated
@@ -264,7 +346,35 @@ that John is entering a Danger Zone.\\
 \hrule
 \vspace{0.5cm} 
 
+\section{Gouvernment Procedure}
+
+\subsection{Handling Ressources}
+\vspace{0.5cm}
+\hrule
+\vspace{0.5cm}
+\begin{lyxlist}{UC1}
+\small{
+\item [\textbf{Use~Case:}] HandlingRessources
+\item [\textbf{Scope:}] Crisis Management System (\emph{CMS})
+\item [\textbf{Primary Actor}:] Gouvernment
+\item [\textbf{Secondary Actor}:] None
+\item [\textbf{Intention:}]Any actor can live track where each Team of each
+Departement is working. It shows if a team is avaible. Ressources Requirments
+can be sent.
+\item [\textbf{Level}:]Subfunctional level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. The gouvernment has a detailed list where all the teams are distributed and
+can in function apply a stratigy to minimize the expansion of the epidemic\\
+2. The gourvenment sees which teams are available and affect them to a
+mission changing in the same time the team status to unavailable.\\
+
+}
+\end{lyxlist}
+\hrule
+\vspace{0.5cm} 
+
 \section{System procedures}
+
 \subsection{Finding safe route}
 \vspace{0.5cm}
 \hrule

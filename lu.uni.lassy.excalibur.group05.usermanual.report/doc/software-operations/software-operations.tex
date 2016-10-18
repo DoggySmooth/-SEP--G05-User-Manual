@@ -14,25 +14,6 @@ operations to several actors may be grouped and presented once to avoid redundan
 \label{operation:MyOperation}
 The system operator creates and adds a new crisis to the system after being
 informed by a third party (citizen, organization) and selects a crisis handler for the crisis.
-
-\begin{description}
-
-\item \textbf{Parameters:} Reporter Personal Information, Crisis Information, Crisis Handler
-\item \textbf{Precondition:} The system operator is logged in and has received information from a reporter.
-\item \textbf{Post-condition:} A new crisis has been added to the system and the new crisis has been assigned to a crisis handler, the Handler has received an automatic notification from the system.
-\item \textbf{Output messages:} The selected Crisis Handler will be notified
-automatically once the crisis has been created.
-
-\item \textbf{Triggering:}
-\begin{enumerate}
-\item From within the crisis management window fill out the required entries related to the personal information of the reporter such as name and phone number.
-\item Fill out the entries related to the crisis type, impacted area, priority, description, GPS coordinates, address and finally choose a Crisis Handler from the combo box.
-\item Click on the “Submit” button in and add the entry to the database.
-\end{enumerate}
-
- 
-\end{description}
-
  
 \subsection{MyExample1}
 Examples should illustrate the use of \textbf{complex operations}.
@@ -40,7 +21,118 @@ Examples should illustrate the use of \textbf{complex operations}.
 Each example must show how the actor uses the software operation under
 description to achieve (at least one of) its expected outcome.
 
-It might be required to include GUI screenshots to illustrate the example.
+It might be required to include GUI screenshots to illustrate the example.\\
+
+\section{Requirements}
+\label{operation:Requirements}
+The professional user (medical department, government) can
+request material needs or support by a resource team. The user has to describe
+the needs in the corresponding window.\\
+
+\begin{description}
+
+\item \textbf{Parameters:} Needs Information, Needs Request
+\item \textbf{Precondition:} The user has to be logged in as professional and
+click on the 'Need' button in the resources menu.
+\item \textbf{Post-condition:}  A need request is send to the corresponding groups.
+\item \textbf{Output messages:} The needs are send to the corresponding team.
+
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item Click on menu, then resource and then on needs.
+\item The user has to fill out the Needs Information that is the selection of
+the receiver, as well as the description of the needs.
+\item The user has to indicate his location to add a verification of the needs. 
+\item After filling in, click on 'Send' to notify the resource teams of your
+request.
+\item The user will be notify after the receiver confirms the request. 
+\end{enumerate}
+\end{description}
+
+\section{Send Alert}
+\label{operation:Send Alert}
+The professional user create an alert message to an event, including a
+description of what happened and what should be done as a reaction of that event. \\
+
+\begin{description}
+
+\item \textbf{Parameters:} Alert Information, User and State Information
+\item \textbf{Precondition:} The user is logged in as professional user and is sending an alert message.
+\item \textbf{Post-condition:}  An alert message is sent out to the users selected in the alert message window.
+\item \textbf{Output messages:} The selected users will be notified after the alert is confirmed.
+
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item In the alert message window, the user fills out the alert information: the title and the description text-fields.
+\item Select which user should receive the alert as well as indicating the state of the alert if needed.
+\item Click on the 'Send' button and in the next screen click on 'Yes' if you
+are sure to submit this message.
+\end{enumerate}
+\end{description}
+
+\section{Send Alert}
+\label{operation:Send Alert}
+The professional user create an alert message to an event, including a
+description of what happened and what should be done as a reaction of that event. \\
+
+\begin{description}
+
+\item \textbf{Parameters:} Alert Information, User and State Information
+\item \textbf{Precondition:} The user is logged in as professional user and is sending an alert message.
+\item \textbf{Post-condition:}  An alert message is sent out to the users selected in the alert message window.
+\item \textbf{Output messages:} The selected users will be notified after the alert is confirmed.
+
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item In the alert message window, the user fills out the alert information: the title and the description text-fields.
+\item Select which user should receive the alert as well as indicating the state of the alert if needed.
+\item Click on the 'Send' button and in the next screen click on 'Yes' if you
+are sure to submit this message.
+\end{enumerate}
+\end{description}
+
+\section{Find Safe Place}
+\label{operation:FindSafePlace}
+Any user requests the safest and fastest way to a certain safe place e.g. hospital,
+safe camp. The operation will send him through GPS to the selected place.\\
+
+\begin{description}
+
+\item \textbf{Parameters:} Place Information, Place Location
+\item \textbf{Precondition:} The user is logged in and is requesting to find the safe place.
+\item \textbf{Post-condition:}  The application send the user to the GPS.
+\item \textbf{Output messages:} Route to the selected safe place is ready.
+
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item In the menu the user clicks on 'Safe Place Finder'.
+\item A new window shows a list of safe places and the user choses one by 
+clicking on the one the user wants to request the route and send the Place Information to SHeavy.
+\item SHeavy send back the Place Location which includes the actual location as well as the safest route.
+\item The user is lead to the GPS window.
+\end{enumerate}
+\end{description}
+
+\section{Urgency Call}
+\label{operation:UrgencyCall}
+Any professional user requests a call to a specific group in a certain location by selecting 
+them in the contact list or using the search to find the group (medics, fireman, military) 
+by name or location (e.g. hospital/camp name or city they are located).\\
+
+\begin{description}
+
+\item \textbf{Parameters:} Contact Information
+\item \textbf{Precondition:} The user is logged in and is requesting to make an urgency call.
+\item \textbf{Post-condition:} The application uses call the respective group or person.
+\item \textbf{Output messages:} Calling 'ContactX'
+
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item Open the 'Contacts'-menu.
+\item Open the 'Contacts'-menu.
+\item Click on 'Call' to request a call to the person or group.
+\end{enumerate}
+\end{description} 
 
 
 

@@ -7,50 +7,6 @@ Such actors are expected to use the software to perform some
 processes or workflows (called here procedures) using the concerned software
 \textbf{(including installation procedures)}.
 
-The description of the processes should be organised to facilitate learning by
-presenting simpler, more common, or initial processes before more complex, less
-utilised, or subsequent processes.
-
-Common procedures should be presented once to avoid redundancy when they are
-used in more complex procedures. 
-
-Each process has to be documented using the following use-case textual description
-template \cite{armour01usecase} \textbf{BUT its content must be as low level as possible with actual values}:
-\vspace{0.5cm}
-\hrule
-\begin{lyxlist}{UC1}
-\small{
-\item [\textbf{Use~Case:}] ProcessMissionOne
-\item [\textbf{Scope:}] Crisis Management System (\emph{CMS})
-\item [\textbf{Primary Actor}:] Coordinator John
-\item [\textbf{Secondary Actor}:] FirstAidWorker Bob,\\
-                  ExternalResourceSystem (ERS)
-\item [\textbf{Intention:}]The intention of the Coordinator is to process mission with ID equal to 1.
-\item [\textbf{Level}:]Sub-functional level
-\item [\textbf{Main~Success~Scenario}]:\\
-1. \emph{John} instructs the \emph{CMS} to process a specific mission.\\
-2. \emph{CMS} selects the internal worker \emph{Bob} to execute the mission.\\
-3. \emph{CMS} instructs `\emph{Bob} to behave as \emph{FAW}.\\
-4. \emph{Bob} informs to the \emph{CMS} of his arrival.\\
-5. \emph{Bob} executes the mission.\\
-6. \emph{Bob} informs to the \emph{CMS} the mission outcome.
-\item [\textbf{Extensions}]:\\
-2.a None internal worker can execute the mission.\\
-\hspace*{0.5cm} 2.a.1 \emph{CMS} requests an external resource to \emph{ERS}.\\
-\hspace*{0.5cm} 2.a.2 \emph{ERS} informs \emph{CMS} that the request can be processed.\\
-\hspace*{1.4cm} Use case continues at step 3.
-
-}
-
-\end{lyxlist}
-\hrule
-\vspace{0.5cm}
-
-\Remark{Graphical User Interfaces (GUIs)}: include GUIs screenshots to show the
-different stages of the process while its is performed by the actor.
-
-
-
 \section{Actors common procedures}
 Common procedures to several actors are grouped in this section to avoid
 redundancy.
@@ -109,7 +65,7 @@ be informed. \\
 \item [\textbf{Primary Actor}:] Medical Department, Military Department,
 Government
 \item [\textbf{Secondary Actor}:] None
-\item [\textbf{Intention:}] Find easily a involved person to call
+\item [\textbf{Intention:}] Find easily a involved person to call.
 \item [\textbf{Level}:]Sub-functional level
 \item [\textbf{Main~Success~Scenario}]:\\
 1. A Professional user can find people by name, by availablity or by his
@@ -132,7 +88,7 @@ function and call them.\\
 \item [\textbf{Intention:}] According to the diagnostic or decision of one of
 the primary actors, an alert will will send a notification to SHeavy about a
 possible epidemic.
-\item [\textbf{Level}:]Subfunctional level
+\item [\textbf{Level}:]Sub-functional level
 \item [\textbf{Main~Success~Scenario}]:\\
 1. Medical Department finds out that an epidemic is possible. They will
 immediately send a confirmed notification to SHeavy.\\
@@ -188,7 +144,7 @@ was not confirmed. For example due to a misclick or misfunction of the system.\\
 \item [\textbf{Secondary Actor}:] None
 \item [\textbf{Intention:}] After the recognition of an possible epidemic, the
 concerned primary, which is going to trigger the alert, will rate the epidemic
-in a color-scale (orange or red).\\
+in a color-scale (orange or red).
 \item [\textbf{Level}:]Analyse level
 \item [\textbf{Main~Success~Scenario}]:\\
 1. If there are some cases of an epidemic, the concerned primary actor willl
@@ -213,7 +169,7 @@ epidemic.\\ }
 \item [\textbf{Primary Actor}:] Medical Department, Government
 \item [\textbf{Secondary Actor}:] None
 \item [\textbf{Intention:}] Update the map and GPS accordingly to 
-the confirmation of a change of zones\\
+the confirmation of a change of zones.
 \item [\textbf{Level}:]Sub-functional level
 \item [\textbf{Main~Success~Scenario}]:\\
 1.	The Medical Department and/or the Military Department uses the TriggerAlertState
@@ -248,7 +204,7 @@ Extensions:\\
 \item [\textbf{Primary Actor}:] Medical Department, Government
 \item [\textbf{Secondary Actor}:] None
 \item [\textbf{Intention:}] Set or change the state of a zone 
-after the confirmation of the Government.\\
+after the confirmation of the Government.
 \item [\textbf{Level}:]Sub-functional level
 \item [\textbf{Main~Success~Scenario}]:\\
 1. After the TriggerAlertState or LiftAlertState, the Government confirms
@@ -279,7 +235,7 @@ to the new state.\\
 \item [\textbf{Primary Actor}:] Creator
 \item [\textbf{Secondary Actor}:] None
 \item [\textbf{Intention:}] The intention of the Creator is to set in place the system made to handle a epidemical crisis. 
-\item [\textbf{Level}:]Subfunctional level
+\item [\textbf{Level}:]Sub-functional level
 \item [\textbf{Main~Success~Scenario}]:\\
 1. The system is set up.// }
 \end{lyxlist}
@@ -302,7 +258,7 @@ to the new state.\\
 the application with the newest data about infected people, no matter what
 sickness they have. In case of a known epidemic infection, keep an updated
 record of the growth of the epidemic.
-\item [\textbf{Level}:]Subfunctional level
+\item [\textbf{Level}:]Sub-functional level
 \item [\textbf{Main~Success~Scenario}]:\\
 1. The Medical Department performs a medical check on a patient.\\
 2. The Medical Department sends data about that patient to the application.\\
@@ -361,7 +317,7 @@ that John is entering a Danger Zone.\\
 \item [\textbf{Intention:}]Any actor can live track where each Team of each
 Departement is working. It shows if a team is avaible. Ressources Requirments
 can be sent.
-\item [\textbf{Level}:]Subfunctional level
+\item [\textbf{Level}:]Sub-functional level
 \item [\textbf{Main~Success~Scenario}]:\\
 1. The gouvernment has a detailed list where all the teams are distributed and
 can in function apply a stratigy to minimize the expansion of the epidemic\\
@@ -386,7 +342,7 @@ mission changing in the same time the team status to unavailable.\\
 \item [\textbf{Primary Actor}:] System
 \item [\textbf{Secondary Actor}:] Common User
 \item [\textbf{Intention:}]Suggest the user the safest way to get to a safe
-place (e.g. hospital)
+place (e.g. hospital).
 \item [\textbf{Level}:]Sub-functional level
 \item [\textbf{Main~Success~Scenario}]:\\
 1. The common user is going to a safe place and uses the GPS of SHeavy.\\

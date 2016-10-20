@@ -12,17 +12,18 @@ Common procedures to several actors are grouped in this section to avoid
 redundancy.
 
 \subsection{Login}
-\vspace{0.5cm}
+\vspace{0.5cm} 
 \hrule
 \vspace{0.5cm}
 \begin{lyxlist}{UC1}
 \small{
 \item [\textbf{Use~Case:}] LoginAttempt
-\item [\textbf{Scope:}] Crisis Management System (\emph{CMS})
-\item [\textbf{Primary Actor}:] Medical Department, Government
+\item [\textbf{Scope:}] Crisis Management System (\emph{SHeavy})
+\item [\textbf{Primary Actor}:] Common user, Government, Medical Department
 \item [\textbf{Secondary Actor}:] None
-\item [\textbf{Intention:}] Log in the user to fit in his function role.
-\item [\textbf{Level}:]Sub-functional level
+\item [\textbf{Intention:}] Log in the user to fit in his function role and
+acces to his specific application view.
+\item [\textbf{Level}:]Subfunctional level
 \item [\textbf{Main~Success~Scenario}]:\\
 1. A user need to login with his credidentials and password to access the
 professional view of the application// 
@@ -38,21 +39,29 @@ professional view of the application//
 \begin{lyxlist}{UC1}
 \small{
 \item [\textbf{Use~Case:}] SendNotice
-\item [\textbf{Scope:}] Crisis Management System (\emph{CMS})
-\item [\textbf{Primary Actor}:] Medical Department, Government
+\item [\textbf{Scope:}] Crisis Management System (\emph{SHeavy})
+\item [\textbf{Primary Actor}:] Medical Departement, Government
 \item [\textbf{Secondary Actor}:] None
-\item [\textbf{Intention:}] Inform specific Departement a need with its
-location.
-\item [\textbf{Level}:]Sub-functional level
+\item [\textbf{Intention:}] All users apart from common users can sent a
+requirement query to a specific user group f.e. Medical Departement, Furnitures Departement with a comment to
+describe his necessity including the location where it's needed.
+\item [\textbf{Level}:]Subfunctional level
 \item [\textbf{Main~Success~Scenario}]:\\
-1. A Professional user can sent a requirment query to a specific user group
-f.e. Medics with a comment to explain his needs and the respectiv groups will
-be informed. \\
+1. The Medical Departement requires some extra material to perfom several tests
+and don't has the equipment. According to that the Medical Departement will send
+a description of his necessity to one or several Departement who are going to
+fill the order. The order will be sent to the Medical Departement's location.\\
+2. The Military Departement want extra barriers to finish the isolation of a
+zone. They are going to order extra barriers to the Furnitures Departement and
+it is going to be delivered to a specific location mentioned in the description
+of the order.\\ 
+3. It could be that some humain ressourcces are needed to a specific location.
+According to that a requirment notice will be sent to the Central Headquarter in
+order to get reinforcements.\\
 }
 \end{lyxlist}
 \hrule 
 \vspace{0.5cm} 
-
 
 \subsection{Find a Person}
 \vspace{0.5cm}
@@ -61,15 +70,19 @@ be informed. \\
 \begin{lyxlist}{UC1}
 \small{
 \item [\textbf{Use~Case:}] FindPerson
-\item [\textbf{Scope:}] Crisis Management System (\emph{CMS})
-\item [\textbf{Primary Actor}:] Medical Department, Military Department,
-Government
-\item [\textbf{Secondary Actor}:] None
-\item [\textbf{Intention:}] Find easily a involved person to call.
-\item [\textbf{Level}:]Sub-functional level
+\item [\textbf{Scope:}] Crisis Management System (\emph{SHeavy})
+\item [\textbf{Primary Actor}:] Medical Departement, Government
+\item [\textbf{Secondary Actor}:] Medical Departement, Government
+\item [\textbf{Intention:}]A user except to common users can find people by name, by availablity or by
+his functionality and call them.
+\item [\textbf{Level}:]Subfunctional level
 \item [\textbf{Main~Success~Scenario}]:\\
-1. A Professional user can find people by name, by availablity or by his
-function and call them.\\
+1. The Government want to know where's the progression to cure the epidemic. In
+order to know that the Government will search for a leader of the Labotary by
+searching a person by his functionality.\\
+2. The Military Departement wants to talk with a medical group's chief. In order
+to call him the military Departement search for a person by functionality and
+availablity.\\
 }
 \end{lyxlist}
 \hrule 
@@ -82,13 +95,13 @@ function and call them.\\
 \begin{lyxlist}{UC1}
 \small{
 \item [\textbf{Use~Case:}] TriggerAlertState
-\item [\textbf{Scope:}] Crisis Management System (\emph{CMS})
-\item [\textbf{Primary Actor}:] Medical Department, Government
-\item [\textbf{Secondary Actor}:] None
+\item [\textbf{Scope:}] Crisis Management System (\emph{SHeavy})
+\item [\textbf{Primary Actor}:] Medical Departement, Government
+\item [\textbf{Secondary Actor}:] Common user
 \item [\textbf{Intention:}] According to the diagnostic or decision of one of
-the primary actors, an alert will will send a notification to SHeavy about a
-possible epidemic.
-\item [\textbf{Level}:]Sub-functional level
+the primary actors, an confirmed alert will be sent and SHeavy will notify all
+users about a possible epidemic.
+\item [\textbf{Level}:]Subfunctional level
 \item [\textbf{Main~Success~Scenario}]:\\
 1. Medical Department finds out that an epidemic is possible. They will
 immediately send a confirmed notification to SHeavy.\\
@@ -108,23 +121,23 @@ immediately send a confirmed notification to SHeavy.\\
 \begin{lyxlist}{UC1}
 \small{
 \item [\textbf{Use~Case:}] LiftAlertState
-\item [\textbf{Scope:}] Crisis Management System (\emph{CMS})
-\item [\textbf{Primary Actor}:] Medical Department, Government
-\item [\textbf{Secondary Actor}:] None
+\item [\textbf{Scope:}] Crisis Management System (\emph{SHeavy})
+\item [\textbf{Primary Actor}:] Medical Departement, Government
+\item [\textbf{Secondary Actor}:] Common user
 \item [\textbf{Intention:}] According to the diagnostic or decision of one of
-the primary actors, an alert will will send a notification to SHeavy about a
-possible epidemic.
+the primary actors, the epidemic alert will be lifted and SHeavy will notify
+all users that the epidemic is over.
 \item [\textbf{Level}:]Subfunctional level
 \item [\textbf{Main~Success~Scenario}]:\\
 1. Medical Department notices that the epidemic is over or that the
-diagnostic was not right. They will immediately send a notification to SHeavy
-to lift the alert.\\
+diagnostic was not right. They will immediately lift the alert and SHeavy
+updates his alert notification.\\
 2. Military Department finds out that an epidemic is over or that their
-information was not right. They will immediately send a notification to SHeavy
-to lift the alert.\\
+information was not right. They will immediately lift the alert and SHeavy
+updates his alert notification.\\
 3. The Government finds out that an epidemic is over or that their
-information was not right. They will immediately send a notification to SHeavy
-to lift the alert.\\
+information was not right. They will immediately lift the alert and SHeavy
+updates his alert notification.\\
 4. The system will automatically lift the pre-alert if the alert notification
 was not confirmed. For example due to a misclick or misfunction of the system.\\
 }
@@ -138,22 +151,24 @@ was not confirmed. For example due to a misclick or misfunction of the system.\\
 \vspace{0.5cm}
 \begin{lyxlist}{UC1}
 \small{
-\item [\textbf{Use~Case:}] AlertAssessements
-\item [\textbf{Scope:}] Crisis Management System (\emph{CMS})
-\item [\textbf{Primary Actor}:] Medical Department, Government
-\item [\textbf{Secondary Actor}:] None
-\item [\textbf{Intention:}] After the recognition of an possible epidemic, the
+\item [\textbf{Use~Case:}] AlertAssessement
+\item [\textbf{Scope:}] Crisis Management System (\emph{SHeavy})
+\item [\textbf{Primary Actor}:] Medical Departement, Government
+\item [\textbf{Secondary Actor}:] Common
+\item [\textbf{Intention:}] After the recognition of a possible epidemic, the
 concerned primary, which is going to trigger the alert, will rate the epidemic
-in a color-scale (orange or red).
+in a color-scale (orange or red). In order to inform the common user as best as
+they can.
 \item [\textbf{Level}:]Analyse level
 \item [\textbf{Main~Success~Scenario}]:\\
-1. If there are some cases of an epidemic, the concerned primary actor willl
+1. If there are some cases of an epidemic, the concerned primary actor will
 trigger the orange level alert.\\
 2. If the epidemic is already spread out or infected person percentage is
 greater than 1/4 of the country's population then the concerned primary actor
 will trigger the red level alert.\\
 3. The green level alert is triggered per default in other words there's no
-epidemic.\\ }
+epidemic.\\ 
+}
 \end{lyxlist}
 \hrule
 \vspace{0.5cm} 
@@ -165,38 +180,67 @@ epidemic.\\ }
 \begin{lyxlist}{UC1}
 \small{
 \item [\textbf{Use~Case:}] SetCamps
-\item [\textbf{Scope:}] Crisis Management System (\emph{CMS})
-\item [\textbf{Primary Actor}:] Laboratory, Military Department
+\item [\textbf{Scope:}] Crisis Management System (\emph{SHeavy})
+\item [\textbf{Primary Actor}:] Laboratory, Military Departement
 \item [\textbf{Secondary Actor}:] None
 \item [\textbf{Intention:}] Set up a safe camp or a quarantine zone.
-\item [\textbf{Level}:]Analyse level
+\item [\textbf{Level}:]Subfunctional level
 \item [\textbf{Main~Success~Scenario}]:\\
 1. The Laboratory surveys the status of a zone.\\
 2. After the Laboratory confirms that a zone is safe or infected, the
-Military Department is notified.\\
-3. The Military Department set up a corresponding safe camp or quarantine
+Military Departement is notified.\\
+3. The Military Departement set up a corresponding safe camp or quarantine
 zone.\\ 
 4.	If a camp is already classified as safe or danger, a new confirmation of the
 Laboratory could come that changes the status of the zone.\\
-5. The Military Department resets the camp to the corresponding change.\\
+5. The Military Departement resets the camp to the corresponding change.\\
 }
 \end{lyxlist}
 \hrule
 \vspace{0.5cm} 
 
-\subsection{Update Map after Alert State}
+\subsection{Set or change zone state}
 \vspace{0.5cm}
 \hrule
 \vspace{0.5cm}
 \begin{lyxlist}{UC1}
 \small{
-\item [\textbf{Use~Case:}] AlertAssessements
-\item [\textbf{Scope:}] Crisis Management System (\emph{CMS})
-\item [\textbf{Primary Actor}:] Medical Department, Government
+\item [\textbf{Use~Case:}] SetZoneState
+\item [\textbf{Scope:}] Crisis Management System (\emph{SHeavy})
+\item [\textbf{Primary Actor}:] Laboratory, Government
+\item [\textbf{Secondary Actor}:] None
+\item [\textbf{Intention:}] Set or change the state of a zone 
+after the confirmation of the Government.
+\item [\textbf{Level}:]Subfunctional level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. After the TriggerAlertState or LiftAlertState, the Government confirms
+ the respective state of a zone: Safe, Unsafe, Danger.\\
+2. The state of zone is also received by SHeavy.\\
+3. SHeavy sets the state to a new zone or changes the state of a current zone to 
+the respective new state.\\
+4. SHeavy updates the state of that zone in the database that updates any
+corresponding functions of the application.\\
+5. SHeavy notifies the Medical Department and the Military Department that a new 
+region has the corresponding state or that an existing region changed his state
+to the new state.\\
+}
+\end{lyxlist}
+\hrule
+\vspace{0.5cm} 
+
+\subsection{Update Map after alert state}
+\vspace{0.5cm}
+\hrule
+\vspace{0.5cm}
+\begin{lyxlist}{UC1}
+\small{
+\item [\textbf{Use~Case:}] UpdateMap
+\item [\textbf{Scope:}] Crisis Management System (\emph{SHeavy})
+\item [\textbf{Primary Actor}:] Laboratory, Military Departement
 \item [\textbf{Secondary Actor}:] None
 \item [\textbf{Intention:}] Update the map and GPS accordingly to 
 the confirmation of a change of zones.
-\item [\textbf{Level}:]Sub-functional level
+\item [\textbf{Level}:]Subfunctional level
 \item [\textbf{Main~Success~Scenario}]:\\
 1.	The Medical Department and/or the Military Department uses the TriggerAlertState
  or LiftAlertState and the Government confirms the change of state.\\
@@ -219,34 +263,6 @@ Extensions:\\
 \hrule
 \vspace{0.5cm} 
 
-\subsection{Set/Change Zone State}
-\vspace{0.5cm}
-\hrule
-\vspace{0.5cm}
-\begin{lyxlist}{UC1}
-\small{
-\item [\textbf{Use~Case:}] SetZoneState
-\item [\textbf{Scope:}] Crisis Management System (\emph{CMS})
-\item [\textbf{Primary Actor}:] Medical Department, Government
-\item [\textbf{Secondary Actor}:] None
-\item [\textbf{Intention:}] Set or change the state of a zone 
-after the confirmation of the Government.
-\item [\textbf{Level}:]Sub-functional level
-\item [\textbf{Main~Success~Scenario}]:\\
-1. After the TriggerAlertState or LiftAlertState, the Government confirms
- the respective state of a zone: Safe, Unsafe, Danger.\\
-2. The state of zone is also received by SHeavy.\\
-3. SHeavy sets the state to a new zone or changes the state of a current zone to 
-the respective new state.\\
-4. SHeavy updates the state of that zone in the database that updates any
-corresponding functions of the application.\\
-5. SHeavy notifies the Medical Department and the Military Department that a new 
-region has the corresponding state or that an existing region changed his state
-to the new state.\\
-}
-\end{lyxlist}
-\hrule
-\vspace{0.5cm} 
 
 \section{Creator procedures}
 
@@ -257,7 +273,7 @@ to the new state.\\
 \begin{lyxlist}{UC1}
 \small{
 \item [\textbf{Use~Case:}] SystemCreation
-\item [\textbf{Scope:}] Crisis Management System (\emph{CMS})
+\item [\textbf{Scope:}] Crisis Management System (\emph{SHeavy})
 \item [\textbf{Primary Actor}:] Creator
 \item [\textbf{Secondary Actor}:] None
 \item [\textbf{Intention:}] The intention of the Creator is to set in place the system made to handle a epidemical crisis. 

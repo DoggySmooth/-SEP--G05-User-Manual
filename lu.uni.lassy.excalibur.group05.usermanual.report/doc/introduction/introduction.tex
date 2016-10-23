@@ -38,106 +38,114 @@ users to\\
 \end{description}
 
 \subsection{Actors \& Functionalities}
-SHeavy has different functionalities for several Actors. Here is an overview.\\
+SHeavy has different functionalities for several Actors and  an
+hierachical-levels of organizational chart. Here is an overview.\\
 
-\subsubsection{Common Users}
-A common user is defined as an end user who uses SHeavy only in order to
-collect information about the possible epidemic and uses the given information
-to avoid the infection.\\
-\begin{description}
- \item[$\bullet$] Common users are the principle target of SHeavy. They are
- going to use the application in order to reach information about a possible
- or several epidemic and follow the instructions given by SHeavy. Common users will get warnings if accessing an infected
-zone by gps tracking. They will have paths to follow to access and find the
-safe zones.
-\end{description}
+\includegraphics{images/ActorLevels.PNG} \\
 
-\subsubsection{Creator procedures}
-
-The Creator only has one main function which is to set in place the system to
-handle an epidemical crisis. He has to make sure every actor can access it and
-keep it accessible as well as maintained and updated.\\
+\subsubsection{CrisYs Corp}
+CrisYs Corp are the developers of the crisis management system SHeavy.\\
 \begin{description}
  \item[$\bullet$] Create and set up the system.
 \end{description} 
 
-\subsubsection{Chief}
-The chief is a designed person to be responsable of a action group in a specific
-domain e.g. Medic or Military.\\
+\subsubsection{Common Users}
+A common user is defined as an end user who uses SHeavy only in order to
+collect information about the possible epidemic and uses the given instructions
+to avoid the infection.\\
 \begin{description}
- \item[$\bullet$] Has to inform whenever he's affected to a mission, where his
- team location is.
-\end{description} 
+ \item[$\bullet$] Common users are the principle target of SHeavy. They are
+ going to use the application in order to reach information about a possible
+ or several epidemic and follow the instructions given by SHeavy. 
+ \item[$\bullet$]Common users will get warnings if accessing an infected
+zone by GPS tracking. They will have paths to follow to access and find the
+safe zones.
+\end{description}
 
 \subsubsection{Coordinators}
-The Coordinator is an intermediate between all the Actors and the System. He has
-several main functions such as to keep the system functional and updated.\\
+The Coordinator is the intermediate between its two low-level departements,
+Medical Departement and Authorities, and the Government. He will execute the
+orders of the Government by using SHeavy. The Coordinator has several main
+functions such as :
 \begin{description}
- \item[$\bullet$] Maintain the system operational: The Coordinator's main task
- is to keep the system operational.
- \item[$\bullet$] If necessary he will perform some improvements and bugs
- corrections on the system and also keep the system maintained and updated.
+ \item[$\bullet$] The Coordinator starts or beends the alert of the concerning
+ epidemic.
+ \item[$\bullet$] He's also responsable for the Ressources Management, which is
+ already set up before the epidemic.
+ \item[$\bullet$] Another task is to update SHeavy's Map accordingly to the
+ situation.
+\end{description} 
+
+\subsubsection{Administrator}
+The Administrator is the responsable who keeps the ssystem operational.
+Additionly he distributs the logins and the professional web and mobile
+interface.
+\begin{description}
+ \item[$\bullet$] The Administrator keeps the system operational by maintaining
+ the system.
+ \item[$\bullet$] If necessary he performs some improvements and bugs
+ corrections.
+ \item[$\bullet$] The Administrator distributs the professional web and mobile
+ interface to the concerned persons. and also the logins.
+ \item[$\bullet$]  The admistrator is able to block a mobile phone or desktop
+ interface for the security of the system.
 \end{description} 
 
 \subsubsection{Medical Departement}
-The Medical Departement is subdivied in two groups. The laboratory and the
-Doctors. They have the duty to recognize an epidemic and send the alert
-statement that enter the population in crisis. They will work together to stop
-the epidemic.\\
+The Medical Departement has two main groups, namely Doctors and the Laboratory.
+Each one is connected with each other and they are exchanging their reports. The
+Medical Departement is the intermediate between its groups and the Coordinator.
 \begin{description}
- \item[$\bullet$] Gives the alert of the beginning of an epidemic.
+ \item[$\bullet$] Sends an alert of a possible epidemic to the Coordinator.
+ \item[$\bullet$] Sends several reports to the Coordinator.
+\end{description} 
+
+\subsubsection{Doctors}
+Doctors are in charge of taking care of the infected victims. They'll also
+perform check ups and send reports and blood sample to the Laboratory.
+\begin{description}
+ \item[$\bullet$] Write reports that will be sent to the Laboratory and Medical
+ Departement.
+ \item[$\bullet$] Works in various check points or hospitals in order to perfom
+ check ups.
+ \item[$\bullet$] Take care of the infected patients the time that an antivirus
+ is found.
+ \item[$\bullet$] Takes blood sample from the infected patients and sends them
+ to the Laboratory.
 \end{description} 
 
 \subsubsection{Laboratory}
-The Laboratory is a medical group which goal is to find a cure to the virus. In
-constant collaboration with different medical chiefs they will get relevant
-information of the evolution of the epidemic in realtime. They also get the
-blood samples and reports from the doctors.\\
+The Laboratory is a medical group which goal is to find a cure against the
+virus. In constant collaboration with different medical chiefs they will get
+relevant information of the evolution of the epidemic in realtime. They also get the
+blood samples and reports from the Doctors.
 \begin{description}
+ \item[$\bullet$] Write reports that will be sent to the Doctors and Medical
+ Departement.
  \item[$\bullet$] Analizing the blood samples to isolate the virus and demantle
  its structure to provide an antivirus.
  \item[$\bullet$] Gives a guideline to the application as a news so that all the
  people knows how to protect itself from become infected.
 \end{description} 
 
-\subsubsection{Doctors}
-Doctors are in charge of providing the antidote to the patients. They will be on
-site to care of the infected people. \\
+\subsubsection{Authorities}
+The Authorities is regrouping various intervention groups such as the fire
+brigade, the police and the militaries. They are working together and have a
+connection with each other. The Authorities are the intermediate between its
+groups and the Coordinator.
 \begin{description}
- \item[$\bullet$] Write Reports that will be sent to the laboratory.
- \item[$\bullet$] Take care of the ill people the time that an antivirus is
- found.
- \item[$\bullet$] Test antiviruses and report if it's effective or not.
-\end{description} 
+ \item[$\bullet$] Support group for various purposes. 
+\end{description}
 
-\subsubsection{Government Departement}
-The Government Departement is divided into two divisions. Both Central
-Headquarter and Military Departement are working together in order to create an harmonious teamwork 
-flow with the other authorities and finally achieve a common aim.\\
-
-\subsubsection{Central Headquarter}
-The Central Headquarter is the intermediate between the internal authorities and
-external governments. They are the main actors who allow SHeavy to work world
-wide.\\
-\begin{description} 
- \item[$\bullet$] Create the communication with all Government world wide in
- order to merge all authorities together. This merge consists to unify medical
- departements in order to find a cure or to stop the epidemic rapidly.\\
- \item[$\bullet$] Manage available ressources in order to create intervention
- groups.\\ 
-\end{description} 
-
-\subsubsection{Military Departement}
-The Military Departement are responsible for the security of all zones and also
-to reduce the panic for organisational and colaborational purposes. They
-represent the strength of the Government.\\
-\begin{description} 
- \item[$\bullet$]They are responsible for the security of all zones.
- \item[$\bullet$]In order to avoid riot they have to make sure that everyone are
- colaborative. 
- \item[$\bullet$]Execute checks in several aeroports in order to avoid the
- spreading out of the epidemic.
-\end{description}  
+\subsubsection{Team Leader}
+Team Leader are present in all instances of epartements such as Medical
+Departements and Authorities. They are the leader of an intervention group which
+is going to execute missions given by the Coordinator.
+\begin{description}
+ \item[$\bullet$] They are responsable of his team.
+ \item[$\bullet$] Accept or decline a mission given by the Coordinator.
+ \item[$\bullet$] Execute missions.
+\end{description}
 
 \subsection{Operating environment}
 SHEAVY is a webbased application. It has a server and a client side. The server

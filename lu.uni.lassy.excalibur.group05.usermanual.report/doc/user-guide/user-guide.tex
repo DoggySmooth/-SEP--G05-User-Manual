@@ -11,57 +11,7 @@ processes or workflows (called here procedures) using the concerned software
 Common procedures to several actors are grouped in this section to avoid
 redundancy.
 
-\subsection{Login}
-\vspace{0.5cm} 
-\hrule
-\vspace{0.5cm}
-\begin{lyxlist}{UC1}
-\small{
-\item [\textbf{Use~Case:}] LoginAttempt
-\item [\textbf{Scope:}] Crisis Management System (\emph{SHeavy})
-\item [\textbf{Primary Actor}:] Common user, Government, Medical Department
-\item [\textbf{Secondary Actor}:] None
-\item [\textbf{Intention:}] Log in the user to fit in his function role and
-acces to his specific application view.
-\item [\textbf{Level}:]Subfunctional level
-\item [\textbf{Main~Success~Scenario}]:\\
-1. A user need to login with his credidentials and password to access the
-professional view of the application// 
-}
-\end{lyxlist}
-\hrule 
-\vspace{0.5cm} 
 
-\subsection{Send a Requirment Notice}
-\vspace{0.5cm}
-\hrule
-\vspace{0.5cm}
-\begin{lyxlist}{UC1}
-\small{
-\item [\textbf{Use~Case:}] SendNotice
-\item [\textbf{Scope:}] Crisis Management System (\emph{SHeavy})
-\item [\textbf{Primary Actor}:] Medical Department, Government
-\item [\textbf{Secondary Actor}:] Furnitures Department
-\item [\textbf{Intention:}] All users apart from common users can send a
-requirement query to a specific user group f.e. Medical Departement, Furnitures Departement with a comment to
-describe his necessity including the location where it's needed.
-\item [\textbf{Level}:]Subfunctional level
-\item [\textbf{Main~Success~Scenario}]:\\                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
-1. The Medical Departement requires some extra material to perfom several tests
-and don't has the equipment. According to that the Medical Departement will send
-a description of his necessity to one or several Departement who are going to
-fill the order. The order will be sent to the Medical Departement's location.\\
-2. The Military Departement want extra barriers to finish the isolation of a
-zone. They are going to order extra barriers to the Furnitures Departement and
-it is going to be delivered to a specific location mentioned in the description
-of the order.\\ 
-3. It could be that some humain ressources are needed to a specific location.
-According to that a requirment notice will be sent to the Central Headquarter in
-order to get reinforcements.\\
-}
-\end{lyxlist}
-\hrule 
-\vspace{0.5cm} 
 
 \subsection{Find a Person}
 \vspace{0.5cm}
@@ -228,61 +178,8 @@ to the new state.\\
 \hrule
 \vspace{0.5cm} 
 
-\subsection{Update Map after alert state}
-\vspace{0.5cm}
-\hrule
-\vspace{0.5cm}
-\begin{lyxlist}{UC1}
-\small{
-\item [\textbf{Use~Case:}] UpdateMap
-\item [\textbf{Scope:}] Crisis Management System (\emph{SHeavy})
-\item [\textbf{Primary Actor}:] Laboratory, Military Departement
-\item [\textbf{Secondary Actor}:] None
-\item [\textbf{Intention:}] Update the map and GPS accordingly to 
-the confirmation of a change of zones.
-\item [\textbf{Level}:]Subfunctional level
-\item [\textbf{Main~Success~Scenario}]:\\
-1.	The Medical Department and/or the Military Department uses the TriggerAlertState
- or LiftAlertState and the Government confirms the change of state.\\
-2.	SHeavy receives that the state of a city or region is changed to a zone
-type.\\
-3.	SHeavy updates the map and GPS accordingly to the alert message.\\
-4.	SHeavy sent a message to the Medical Department, Military Department and Government 
-that the state has changed.\\
-5.	SHeavy sent an alert message to the Common User in order to inform this
-change.\\
-Extensions:\\
-	3.a The state of a city or region is set or changed to Safe, Unsafe or
-	Danger.\\
-		3.a.1 After the TriggerAlertState or LiftAlertState, Sheavy receives the
-		state.\\
-		3.a.2 SHeavy uses that information to set new zones and update the map and
-		GPS.\\
-}
-\end{lyxlist}
-\hrule
-\vspace{0.5cm} 
-
 
 \section{Creator procedures}
-
-\subsection{System Creation}
-\vspace{0.5cm}
-\hrule
-\vspace{0.5cm}
-\begin{lyxlist}{UC1}
-\small{
-\item [\textbf{Use~Case:}] SystemCreation
-\item [\textbf{Scope:}] Crisis Management System (\emph{SHeavy})
-\item [\textbf{Primary Actor}:] Creator
-\item [\textbf{Secondary Actor}:] None
-\item [\textbf{Intention:}] The intention of the Creator is to set in place the system made to handle a epidemical crisis. 
-\item [\textbf{Level}:]Sub-functional level
-\item [\textbf{Main~Success~Scenario}]:\\
-1. The system is set up.// }
-\end{lyxlist}
-\hrule 
-\vspace{0.5cm} 
 
 \section{Medical Department procedures}
 

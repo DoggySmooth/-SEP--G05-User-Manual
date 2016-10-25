@@ -11,7 +11,53 @@ processes or workflows (called here procedures) using the concerned software
 Common procedures to several actors are grouped in this section to avoid
 redundancy.
 
-Salut
+
+\subsection{Send Mission}
+\vspace{0.5cm}
+\hrule
+\vspace{0.5cm}
+\begin{lyxlist}{UC1}
+\small{
+\item [\textbf{Use~Case:}] SendMission
+\item [\textbf{Scope:}] Crisis Management System (\emph{SHeavy})
+\item [\textbf{Primary Actor}:] Coordinator
+\item [\textbf{Secondary Actor}:] Medical Departement, Authorities
+\item [\textbf{Intention:}]The Coordinator sent a mission to a teamleader.
+\item [\textbf{Level}:]Subfunctional level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. The Coordinator access the MISSION menu in his webinterface.\\
+2. The Coordinator choose Submit Mission.\\
+2. The Coordinator fullfill the information.\\
+3. The Coordinator sends the notification.\\
+}
+\end{lyxlist}
+\hrule 
+\vspace{0.5cm} 
+
+
+\subsection{Accept Mission}
+\vspace{0.5cm}
+\hrule
+\vspace{0.5cm}
+\begin{lyxlist}{UC1}
+\small{
+\item [\textbf{Use~Case:}] AcceptMission
+\item [\textbf{Scope:}] Crisis Management System (\emph{SHeavy})
+\item [\textbf{Primary Actor}:] Medical Departement, Authorities
+\item [\textbf{Secondary Actor}:] Coordinator
+\item [\textbf{Intention:}]The Teamleader accepts a mission.
+\item [\textbf{Level}:]Subfunctional level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. The Teamleader gets a notification on his mobile application.\\
+2. The Teamleader accept or decline the mission.\\
+Extensions:\\
+	2.a. If accepted the mission will be sent to his team members.\\
+	2.b. If declined the mission will be affected to another team.\\ 
+
+}
+\end{lyxlist}
+\hrule 
+\vspace{0.5cm} 
 
 \subsection{Find a Person}
 \vspace{0.5cm}
@@ -27,12 +73,13 @@ Salut
 his functionality and call them.
 \item [\textbf{Level}:]Subfunctional level
 \item [\textbf{Main~Success~Scenario}]:\\
-1. The Government want to know where's the progression to cure the epidemic. In
-order to know that the Government will search for a leader of the Labotary by
-searching a person by his functionality.\\
-2. The Military Departement wants to talk with a medical group's chief. In order
-to call him the military Departement search for a person by functionality and
-availablity.\\
+1. A User access the contact Menu.\\
+2. A User input the name, fonctionality and get a list of matches.\\
+3. A User can call or write a message to the specific user.\\
+Extensions:\\ 
+	1.a. A common user get just access to the Call Centers lines.\\
+
+\item 
 }
 \end{lyxlist}
 \hrule 
@@ -249,19 +296,18 @@ that John is entering a Danger Zone.\\
 \vspace{0.5cm}
 \begin{lyxlist}{UC1}
 \small{
-\item [\textbf{Use~Case:}] HandlingRessources
+\item [\textbf{Use~Case:}] OverView
 \item [\textbf{Scope:}] Crisis Management System (\emph{CMS})
-\item [\textbf{Primary Actor}:] Gouvernment
-\item [\textbf{Secondary Actor}:] None
-\item [\textbf{Intention:}]Any actor can live track where each Team of each
-Departement is working. It shows if a team is avaible. Ressources Requirments
-can be sent.
+\item [\textbf{Primary Actor}:] Coordinator
+\item [\textbf{Secondary Actor}:] Medical Departement, Authorities
+\item [\textbf{Intention:}] The Coordinator gets an overview of the infected
+zone, it's infrastructures and the deployed teams.
 \item [\textbf{Level}:]Sub-functional level
 \item [\textbf{Main~Success~Scenario}]:\\
-1. The gouvernment has a detailed list where all the teams are distributed and
-can in function apply a stratigy to minimize the expansion of the epidemic\\
-2. The gourvenment sees which teams are available and affect them to a
-mission changing in the same time the team status to unavailable.\\
+1. The Coordinator access his webinterface.\\
+2. The Coordinator clicks on OVERVIEW in the menu.\\
+Extensions:\\
+	2.a. He can filter the information.\\
 
 }
 \end{lyxlist}
@@ -279,18 +325,18 @@ mission changing in the same time the team status to unavailable.\\
 \item [\textbf{Use~Case:}] FindSafe
 \item [\textbf{Scope:}] Crisis Management System (\emph{CMS})
 \item [\textbf{Primary Actor}:] System
-\item [\textbf{Secondary Actor}:] Common User
+\item [\textbf{Secondary Actor}:] Every User
 \item [\textbf{Intention:}]Suggest the user the safest way to get to a safe
 place (e.g. hospital).
 \item [\textbf{Level}:]Sub-functional level
 \item [\textbf{Main~Success~Scenario}]:\\
-1. The common user is going to a safe place and uses the GPS of SHeavy.\\
-2. SHeavy calculates the fastest way to the indicated place.\\
-3. SHeavy shows the safest way from the GPS to John.\\
+1. The user access the SafePlaceFinder in the menu bar of the application.\\
+2. The user select a place to go.\\
+3. The user's GPS application opens with the route.\\
 Extensions:\\
-2.a SHeavy calculates the fastest way avoiding Unsafe and Danger Zones.\\
-	2.a.1 SHeavy ignores any way through an Unsafe/Danger Zone.\\
-	2.a.2 SHeavy calculates the fastest way from the non-ignored ways.\\
+3.a SHeavy calculates the fastest way avoiding Unsafe and Danger Zones.\\
+	3.a.1 SHeavy ignores any way through an Unsafe/Danger Zone.\\
+	3.a.2 SHeavy calculates the fastest way from the non-ignored ways.\\
 \item 
 }
 \end{lyxlist}

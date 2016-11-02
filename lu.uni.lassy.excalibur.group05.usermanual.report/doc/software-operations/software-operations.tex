@@ -23,50 +23,45 @@ description to achieve (at least one of) its expected outcome.
 
 It might be required to include GUI screenshots to illustrate the example.\\
 
-\section{Requirements}
-\label{operation:Requirements}
-The professional user (medical department, government) can
-request material needs or support by a resource team. The user has to describe
-the needs in the corresponding window.\\
-
-\begin{description}
-
-\item \textbf{Parameters:} Needs Information, Needs Request
-\item \textbf{Precondition:} The user has to be logged in as professional and
-click on the 'Need' button in the resources menu.
-\item \textbf{Post-condition:}  A need request is send to the corresponding groups.
-\item \textbf{Output messages:} The needs are send to the corresponding team.
-
-\item \textbf{Triggering:}
-\begin{enumerate}
-\item Click on menu, then resource and then on needs.
-\item The user has to fill out the Needs Information that is the selection of
-the receiver, as well as the description of the needs.
-\item The user has to indicate his location to add a verification of the needs. 
-\item After filling in, click on 'Send' to notify the resource teams of your
-request.
-\item The user will be notify after the receiver confirms the request. 
-\end{enumerate}
-\end{description}
-
 \section{Send Alert}
 \label{operation:Send Alert}
-The professional user create an alert message to an event, including a
-description of what happened and what should be done as a reaction of that event. \\
-
+The Medical Departement creates an alert message to an event, including a
+report of what happened and what should be done as a reaction of that event.
+He's sending it to the Coordinator who will read it and trigger the alert state.\\
 \begin{description}
-
 \item \textbf{Parameters:} Alert Information, User and State Information
-\item \textbf{Precondition:} The user is logged in as professional user and is sending an alert message.
-\item \textbf{Post-condition:}  An alert message is sent out to the users selected in the alert message window.
-\item \textbf{Output messages:} The selected users will be notified after the alert is confirmed.
-
+\item \textbf{Precondition:} The user is logged in as professional user and is
+sending an alert message.
+\item \textbf{Post-condition:}  An alert message is sent out to the Coordinator
+selected in the alert message window.
+\item \textbf{Output messages:} The Coordinator will be notified that an
+epidemic is spreading out.
 \item \textbf{Triggering:}
 \begin{enumerate}
 \item In the alert message window, the user fills out the alert information: the title and the description text-fields.
-\item Select which user should receive the alert as well as indicating the state of the alert if needed.
-\item Click on the 'Send' button and in the next screen click on 'Yes' if you
-are sure to submit this message.
+\item The message has to have an report as well as indicating the state of the
+alert if needed.
+\item Click on the 'Send' button and the Coordinator will be notified of the
+epidemic.
+\end{enumerate}
+\end{description}
+
+\section{Trigger Alert}
+\label{operation:TriggerAlert}
+The Coordinator recieves an alert message from the Medical Departement
+including a report about the severity of the epidemic. The Coordinator will
+read it and will trigger the alert and notify every user about the epidemic.\\
+\begin{description}
+\item \textbf{Parameters:} Alert Information, User and State Information
+\item \textbf{Precondition:} The user is logged in as professional user. He
+has already read the report and is triggering the alert.
+\item \textbf{Post-condition:} The alert is triggered.
+\item \textbf{Output messages:} Every user will be notified that an epidemic is
+on going.
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item The Coordinator click on the 'Alert' button and the alert is send to very
+user.
 \end{enumerate}
 \end{description}
 
@@ -74,14 +69,11 @@ are sure to submit this message.
 \label{operation:FindSafePlace}
 Any user requests the safest and fastest way to a certain safe place e.g. hospital,
 safe camp. The operation will send him through GPS to the selected place.\\
-
 \begin{description}
-
 \item \textbf{Parameters:} Place Information, Place Location
 \item \textbf{Precondition:} The user is logged in and is requesting to find the safe place.
 \item \textbf{Post-condition:}  The application send the user to the GPS.
 \item \textbf{Output messages:} Route to the selected safe place is ready.
-
 \item \textbf{Triggering:}
 \begin{enumerate}
 \item In the menu the user clicks on 'Safe Place Finder'.
@@ -97,14 +89,11 @@ clicking on the one the user wants to request the route and send the Place Infor
 Any professional user requests a call to a specific group in a certain location by selecting 
 them in the contact list or using the search to find the group (medics, fireman, military) 
 by name or location (e.g. hospital/camp name or city they are located).\\
-
 \begin{description}
-
 \item \textbf{Parameters:} Contact Information
 \item \textbf{Precondition:} The user is logged in and is requesting to make an urgency call.
 \item \textbf{Post-condition:} The application uses call the respective group or person.
 \item \textbf{Output messages:} Calling 'ContactX'
-
 \item \textbf{Triggering:}
 \begin{enumerate}
 \item Open the 'Contacts'-menu.
@@ -112,6 +101,95 @@ by name or location (e.g. hospital/camp name or city they are located).\\
 \item Click on 'Call' to request a call to the person or group.
 \end{enumerate}
 \end{description} 
+
+\section{Send Mission}
+\label{operation:SendMission}
+The Coordinator send differents mission to various groups leaders (e.g. fire
+figther, military, Doctors,..) with some important iformation concerning the mission.\\
+\begin{description}
+\item \textbf{Parameters:} Contact Information, Mission Information
+\item \textbf{Precondition:} The user is logged in as an professional user
+and is sending a mission.
+\item \textbf{Post-condition:} The mission is recieved by the concerned leader.
+\item \textbf{Output messages:} The mission is sent to the leader.
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item The Coordinator opens the 'Mission-view'.
+\item Select the concerned leader by slecting a leader in the 'send to' field.
+\item Writes the title and select the type by cicking on 'Set Type'.
+\item Fill the information about the selected type.
+\item Click on the 'Send'-Button to submit the mission.
+\end{enumerate}
+\end{description} 
+
+\section{Accept Mission}
+\label{operation:AcceptMission}
+Each of the group's leader can recvieve a mission from he Coordinator. The
+leader has to accept or decline the mission if they can't execute it.\\
+\begin{description}
+\item \textbf{Parameters:} Contact Information, Mission Information
+\item \textbf{Precondition:} The user is logged in as an professional user
+and recieves the mission notification.
+\item \textbf{Post-condition:} The mission will be executed or send to another
+team leader.
+\item \textbf{Output messages:} The mission is accepted or declined.
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item The team leader recieves a mission.
+\item He can click on 'Details' to get further information or decline
+immimediately.
+\item By clickin ont 'Extras' he get information about other teams present in
+the mission zone.
+\item He can click on 'accept' or 'decline'
+\item After accepting the mission he gets a confirmation notification. He can
+quit it by clicking on 'OK'.
+\end{enumerate}
+\end{description} 
+
+\section{Edit Map}
+\label{operation:EditMap}
+The Coordinator can edit the map such as create, remove or change zones on the
+map.\\
+\begin{description}
+\item \textbf{Parameters:} Epidemic Information, Change State
+\item \textbf{Precondition:} The user is logged in as an professional user
+and is creating, removing or changing a zone.
+\item \textbf{Post-condition:} The map is updated an ready to use.
+\item \textbf{Output messages:} Every users will be notified about the changes.
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item The Coordinator opens the 'Map Editor-view'.
+\item He has to click on the 'Add Zone' button to create a new Zone.
+\item He has to click on the 'Set Zone' button to change or delete a new Zone.
+\item Fill the information about zone to add.
+\item Fill the information about zone to change or delete.
+\item Click on the 'Add Zone'-Button or 'Set Zone' to submit the modifications
+on the map.
+\end{enumerate}
+\end{description} 
+
+\section{Requirements}
+\label{operation:Requirements}
+The professional user (medical department, authorities) can
+request material needs or support by a resource team. The user has to describe
+the needs in the corresponding window.\\
+\begin{description}
+\item \textbf{Parameters:} Needs Information, Needs Request
+\item \textbf{Precondition:} The user has to be logged in as professional and
+click on the 'Need' button in the resources menu.
+\item \textbf{Post-condition:}  A need request is send to the corresponding groups.
+\item \textbf{Output messages:} The needs are send to the corresponding team.
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item Click on menu, then resource and then on needs.
+\item The user has to fill out the Needs Information that is the selection of
+the receiver, as well as the description of the needs.
+\item The user has to indicate his location to add a verification of the needs. 
+\item After filling in, click on 'Send' to notify the resource teams of your
+request.
+\item The user will be notify after the receiver confirms the request. 
+\end{enumerate}
+\end{description}
 
 
 

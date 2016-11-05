@@ -108,9 +108,9 @@ nnetwork.
 \end{enumerate}
 \end{description} 
 
-\section{Send Mission}
-\label{operation:SendMission}
-The Coordinator sends differents mission to various groups leaders (e.g. fire
+\section{Set Camp Mission}
+\label{operation:SetCampMission}
+The Coordinator sends set camp mission to various groups leaders (e.g. fire
 figther, military, Doctors,..) with some important information concerning the
 mission.\\
 \begin{description}
@@ -123,11 +123,90 @@ mission.\\
 \item The Coordinator opens the 'Mission-view'.
 \item Select one or more teams by selecting a leader in the 'send to' field or
 sends to all by clicking on 'Send to All'.
-\item Writes the title and select the type by cicking on 'Set Type'.
-\item Fill the information about the selected mission type.
+\item Writes the title and select 'Set Camp' as type by clicking on 'Set
+Type'.
+\item Give the Location of the camp and also announce a deadline in format Date
+and time.
+\item Furthermore indicates de capacity of the camp and how many teams are
+needed there.
+\item Fill the description for more details about the mission.
+\item Click on the 'Send'-Button to submit the mission.
+\end{enumerate}
+\end{description}
+
+\section{Set Checkpoint Mission}
+\label{operation:CheckpointMission}
+The Coordinator sends set checkpoint mission to various groups leaders (e.g.
+fire figther, military, Doctors,..) with some important information concerning the
+mission.\\
+\begin{description}
+\item \textbf{Parameters:} Contact Information, Mission Information
+\item \textbf{Precondition:} The user is logged in as a professional user.
+\item \textbf{Post-condition:} The mission is recieved by the concerned leader.
+\item \textbf{Output messages:} 'Mission Pending'
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item The Coordinator opens the 'Mission-view'.
+\item Select one or more teams by selecting a leader in the 'send to' field or
+sends to all by clicking on 'Send to All'.
+\item Writes the title and select 'Set Checkpoint' as type by clicking on 'Set
+Type'.
+\item Give the Location of the camp and also announce a deadline in format Date
+and time.
+\item Furthermore indicates how many teams are needed there and where victims
+are going to be moved.
+\item Fill the description for more details about the mission.
 \item Click on the 'Send'-Button to submit the mission.
 \end{enumerate}
 \end{description} 
+
+\section{Transfer Mission}
+\label{operation:TransferMission}
+The Coordinator sends transfer mission to various groups leaders (e.g. fire
+figther, military, Doctors,..) with some important information concerning the
+mission.\\
+\begin{description}
+\item \textbf{Parameters:} Contact Information, Mission Information
+\item \textbf{Precondition:} The user is logged in as a professional user.
+\item \textbf{Post-condition:} The mission is recieved by the concerned leader.
+\item \textbf{Output messages:} 'Mission Pending'
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item The Coordinator opens the 'Mission-view'.
+\item Select one or more teams by selecting a leader in the 'send to' field or
+sends to all by clicking on 'Send to All'.
+\item Writes the title and select 'Transfer People' as type by clicking on 'Set
+Type'.
+\item Give the Locations from where to where people are going to be moved.
+\item Announce a deadline in format Date and time and how many people are going
+to be moved.
+\item Click on the 'Send'-Button to submit the mission.
+\end{enumerate}
+\end{description}
+
+\section{Evacuation Mission}
+\label{operation:EvacuateMission}
+The Coordinator sends evacuation mission to various groups leaders (e.g. fire
+figther, military, Doctors,..) with some important information concerning the
+mission.\\
+\begin{description}
+\item \textbf{Parameters:} Contact Information, Mission Information
+\item \textbf{Precondition:} The user is logged in as a professional user.
+\item \textbf{Post-condition:} The mission is recieved by the concerned leader.
+\item \textbf{Output messages:} 'Mission Pending'
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item The Coordinator opens the 'Mission-view'.
+\item Select one or more teams by selecting a leader in the 'send to' field or
+sends to all by clicking on 'Send to All'.
+\item Writes the title and select 'Evacuate' as type by clicking on 'Set
+Type'.
+\item Give the Locations from where to where people are going to be evacuate.
+\item Indicate an estimated number of people to be rescued but can be changed
+lately.
+\item Click on the 'Send'-Button to submit the mission.
+\end{enumerate}
+\end{description}
 
 \section{Accept Mission}
 \label{operation:AcceptMission}

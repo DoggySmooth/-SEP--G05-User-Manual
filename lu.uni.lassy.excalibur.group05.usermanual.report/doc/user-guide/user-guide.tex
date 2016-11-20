@@ -31,8 +31,8 @@ their mobile have to proceed the installation.
 4. The application was installed succesfully and the user can start using the
 application.\\
 Extensions:\\
-1.a If the user uses an iOS device, he has to open the apple store.\\
-1.b If the user uses an android device, he has to open the play store.\\	
+	1.a If the user uses an iOS device, he has to open the apple store.\\
+	1.b If the user uses an android device, he has to open the play store.\\	
 }
 \end{lyxlist}
 \hrule 
@@ -99,18 +99,51 @@ Extensions:\\
 \item [\textbf{Scope:}] Crisis Management System \textbf{(\emph{SHeavy})}
 \item [\textbf{Primary Actor}:] Medical Departement, Authorities
 \item [\textbf{Secondary Actor}:] Coordinator
-\item [\textbf{Intention:}]The Teamleader accepts a mission.
+\item [\textbf{Intention:}]The Teamleader accepts or declines a mission.
 \item [\textbf{Level}:]Sub-functional level
 \item [\textbf{Main~Success~Scenario}]:\\
-1. The Teamleader gets a notification on his mobile application.\\
+1. The Teamleader gets a notification on his mobile application about the
+'Set Up Camp' mission.\\
 2. The Teamleader accept or decline the mission.\\
 Extensions:\\
+	1.a.  Teamleader gets a notification on his mobile application about the
+'Set Up Checkpoint' mission.\\
+	1.a.  Teamleader gets a notification on his mobile application about the
+'Transfer' mission.\\
+	1.a.  Teamleader gets a notification on his mobile application about the
+'Evacuate' mission.\\
 	2.a. If accepted the mission will be sent to his team members.\\
 	2.b. If declined the mission will be affected to another team.\\ 
 }
 \end{lyxlist}
 \hrule 
 \vspace{0.5cm} 
+
+\subsection{Execute Mission}
+\vspace{0.5cm}
+\hrule
+\vspace{0.5cm}
+\begin{lyxlist}{UC1}
+\small{
+\item [\textbf{Use~Case:}] ExecuteMission
+\item [\textbf{Scope:}] Crisis Management System \textbf{(\emph{SHeavy})}
+\item [\textbf{Primary Actor}:] Medical Departement, Authorities
+\item [\textbf{Secondary Actor}:] Coordinator
+\item [\textbf{Intention:}]The Teamleader and his team execute the mission.
+\item [\textbf{Level}:]Sub-functional level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. The Team  executes the 'Set Up Camp' mission.\\
+2. The Team leader notifies the Coordinator that the mission was successfully
+executed.\\
+ Extensions:\\
+	1.a. The Team  executes the 'Set Up Checkpoint' mission.\\
+	1.b. The Team  executes the 'Transfer' mission.\\
+	1.c. The Team  executes the 'Evacuation' mission.\\
+}
+\end{lyxlist}
+\hrule 
+\vspace{0.5cm} 
+
 
 \section{Administrator procedures}
 
@@ -139,6 +172,7 @@ Extensions:\\
 \end{lyxlist}
 \hrule 
 \vspace{0.5cm}
+
 
 \section{Coordinator procedures}
 
@@ -220,7 +254,37 @@ Extensions:\\
 \hrule
 \vspace{0.5cm} 
 
-\subsection{Send Set Up Camp Mission}
+\subsection{Mission Management}
+\vspace{0.5cm}
+\hrule
+\vspace{0.5cm}
+\begin{lyxlist}{UC1}
+\small{
+\item [\textbf{Use~Case:}] MissionManagement
+\item [\textbf{Scope:}] Crisis Management System \textbf{(\emph{SHeavy})}
+\item [\textbf{Primary Actor}:] Coordinator
+\item [\textbf{Secondary Actor}:] Medical Departement, Authorities, Team leaders
+\item [\textbf{Intention:}]The Coordinator requests a missions to be executed.
+\item [\textbf{Level}:]Sub-functional level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. The Coordinator 'Request Set Up Camp Mission'.\\
+2  All relevant Team leaders 'Accept Mission'.\\
+3. All relevant Team leaders 'Execute Mission'.\\
+4. The Coordinator put the 'Set Up Camp Mission' as finished.\\
+Extensions:\\
+	1.a. The Coordinator 'Request Set Up Checkpoint Mission'.\\
+	1.b. The Coordinator 'Request Transfer Mission'.\\
+	1.c. The Coordinator 'Request Evacuation Mission'.\\
+	4.a. The Coordinator put the 'Set Up Checkpoint' as finished.\\
+	4.b. The Coordinator put the 'Transfer Mission' as finished.\\
+	4.c. The Coordinator put the 'Evacuation Mission' as finished.\\
+	
+}
+\end{lyxlist}
+\hrule 
+\vspace{0.5cm} 
+
+\subsection{Request Set Up Camp Mission}
 \vspace{0.5cm}
 \hrule
 \vspace{0.5cm}
@@ -234,24 +298,28 @@ Extensions:\\
 to one or more teamleaders and his team members.
 \item [\textbf{Level}:]Sub-functional level
 \item [\textbf{Main~Success~Scenario}]:\\
-1. The Coordinator opens the 'Mission-view' in the menu of his webinterface.\\
-2. He chooses one or more teamleaders or choose all teamleaders.\\
-3. He writes the title of the mission.\\
-4. The Coordinator writes where the camp will be set up in the Location
+1. The Coordinator has to log in as 'Coordinator-user'.
+2. The Coordinator opens the 'Mission-view' in the menu of his webinterface.\\
+3. The Coordinator chooses one or more team leaders.\\
+4. The Coordinator writes the title of the mission.\\
+5. The Coordinator writes where the camp will be set up in the Location
 Textfield.\\
-5. The Coordinator selects 'Set Camp' by clicking on 'Set Type'.\\
-6. He enters a deadline by filling the date and time textfield.\\
+6. The Coordinator enters a deadline by filling the date and time textfield.\\
 7. The Coordinator writes the capacity of the camp.\\
-8. He also writes the number of teams needed for this mission.\\
+8. The CoordinatorHe also writes the number of teams needed for this mission.\\
 9. The Coordinator can also writes further information in the description
 area.\\
-10. Finally the Coordinator clicks on 'Send' to send the mission to the selected
-teams.\\ }
+10. The Coordinator clicks on 'Send' to send the mission to the selected
+teams.\\ 
+11. The System will notify the relevant Team leaders.
+Extensions:\\
+	3.a The Coordinator can also select all team leaders.\\
+}
 \end{lyxlist}
 \hrule 
 \vspace{0.5cm} 
 
-\subsection{Send Set Up Checkpoint Mission}
+\subsection{Request Set Up Checkpoint Mission}
 \vspace{0.5cm}
 \hrule
 \vspace{0.5cm}
@@ -265,30 +333,33 @@ teams.\\ }
 checkpoint to one or more teamleaders and his team members.
 \item [\textbf{Level}:]Sub-functional level
 \item [\textbf{Main~Success~Scenario}]:\\
-1. The Coordinator opens the 'Mission-view' in the menu of his webinterface.\\
-2. He chooses one or more teamleaders or choose all teamleaders.\\
-3. He writes the title of the mission.\\
-4. The Coordinator writes where the camp will be set up in the Location
+1. The Coordinator has to log in as 'Coordinator-user'.\\
+2. The Coordinator opens the 'Mission-view' in the menu of his webinterface.\\
+3. The Coordinator chooses one or more teamleaders.\\
+4. The Coordinator writes the title of the mission.\\
+5. The Coordinator writes where the camp will be set up in the Location
 Textfield.\\
-5. The Coordinator selects 'Set Checkpoint' by clicking on 'Set Type'.\\
-6. He enters a deadline by filling the date and time textfield.\\
-7. He also writes the number of teams needed for this mission.\\
+6. The Coordinator enters a deadline by filling the date and time textfield.\\
+7. The Coordinator also writes the number of teams needed for this mission.\\
 8. The Coordinator can also writes further information in the description
 area.\\
-9. Finally the Coordinator clicks on 'Send' to send the mission to the selected
+9. The Coordinator clicks on 'Send' to send the mission to the selected
 teams.\\
+10. The System will notify the relevant Team leaders.
+Extensions:\\
+	3.a The Coordinator can also select all team leaders.\\
 }
 \end{lyxlist}
 \hrule 
 \vspace{0.5cm} 
 
-\subsection{Send Transfer Mission}
+\subsection{Request Transfer Mission}
 \vspace{0.5cm}
 \hrule
 \vspace{0.5cm}
 \begin{lyxlist}{UC1}
 \small{
-\item [\textbf{Use~Case:}] TransferaMission
+\item [\textbf{Use~Case:}] TransferMission
 \item [\textbf{Scope:}] Crisis Management System \textbf{(\emph{SHeavy})}
 \item [\textbf{Primary Actor}:] Coordinator
 \item [\textbf{Secondary Actor}:] Medical Departement, Authorities
@@ -296,22 +367,25 @@ teams.\\
 to one or more teamleaders and his team members.
 \item [\textbf{Level}:]Sub-functional level
 \item [\textbf{Main~Success~Scenario}]:\\
-1. The Coordinator opens the 'Mission-view' in the menu of his webinterface.\\
-2. He chooses one or more teamleaders or choose all teamleaders.\\
-3. He writes the title of the mission.\\
-4. The Coordinator selects 'Transfer People' by clicking on 'Set Type'.\\
+1. The Coordinator has to log in as 'Coordinator-user'.\\
+2. The Coordinator opens the 'Mission-view' in the menu of his webinterface.\\
+3. He chooses one or more teamleader.\\
+4. The Coordinator writes the title of the mission.\\
 5. The Coordinator decides where the person are going to be moved. According to
 that he needs to fills the from and to textfield.\\
-6. He enters a deadline by filling the date and time textfield.\\
+6. The Coordinator enters a deadline by filling the date and time textfield.\\
 7. The Coordinator writes the quantity of person to be moved.\\
-8. Finally the Coordinator clicks on 'Send' to send the mission to the selected
+8. The Coordinator clicks on 'Send' to send the mission to the selected
 teams.\\
+9. The System will notify the relevant Team leaders.
+Extensions:\\
+	3.a The Coordinator can also select all team leaders.\\
 }
 \end{lyxlist}
 \hrule 
 \vspace{0.5cm} 
 
-\subsection{Send Evacuation Mission}
+\subsection{Request Evacuation Mission}
 \vspace{0.5cm}
 \hrule
 \vspace{0.5cm}
@@ -325,16 +399,19 @@ teams.\\
 to one or more teamleaders and his team members.
 \item [\textbf{Level}:]Sub-functional level
 \item [\textbf{Main~Success~Scenario}]:\\
-1. The Coordinator opens the 'Mission-view' in the menu of his webinterface.\\
-2. He chooses one or more teamleaders or choose all teamleaders.\\
-3. He writes the title of the mission.\\
-4. The Coordinator selects 'Evacuate' by clicking on 'Set Type'.\\
+1. The Coordinator has to log in as 'Coordinator-user'.\\
+2. The Coordinator opens the 'Mission-view' in the menu of his webinterface.\\
+3. The Coordinator chooses one or more teamleaders.\\
+4. The Coordinator writes the title of the mission.\\
 5. The Coordinator selects the kind of area in 'Type'.\\
-6. He also fills the from and to Textfield to specificate from where to where
+6. The Coordinator also fills the from and to Textfield to specificate from where to where
 the people should be moved.\\
-7. He also writes an estimation of people to be moved.\\
-8. Finally the Coordinator clicks on 'Send' to send the mission to the selected
+7. The Coordinator also writes an estimation of people to be moved.\\
+8. The Coordinator clicks on 'Send' to send the mission to the selected
 teams.\\
+9. The System will notify the relevant Team leaders.
+Extensions:\\
+	3.a The Coordinator can also select all team leaders.\\
 }
 \end{lyxlist}
 \hrule 
@@ -387,7 +464,7 @@ notify all the users.\\
 \end{lyxlist}
 \hrule
 \vspace{0.5cm} 
-
+ 
 \section{Doctor procedures}
 
 \subsection{Handling of infected patient}

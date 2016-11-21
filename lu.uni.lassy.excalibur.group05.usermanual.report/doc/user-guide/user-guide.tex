@@ -25,14 +25,13 @@ redundancy.
 their mobile have to proceed the installation.
 \item [\textbf{Level}:]Sub-functional level
 \item [\textbf{Main~Success~Scenario}]:\\
-1. The user has to open their respective mobile store applicaton.\\
+1. The user has to open 'Play Store' if the user uses an android device.\\
 2. He has to search for SHeavy in the searchbar.\\
 3. Then he as to confirm the installation by accepting the terms.\\
 4. The application was installed succesfully and the user can start using the
 application.\\
 Extensions:\\
-	1.a If the user uses an iOS device, he has to open the apple store.\\
-	1.b If the user uses an android device, he has to open the play store.\\	
+	1.a If the user uses an iOS device, he has to open the 'Apple store'.\\
 }
 \end{lyxlist}
 \hrule 
@@ -46,17 +45,19 @@ Extensions:\\
 \small{
 \item [\textbf{Use~Case:}] FindPerson
 \item [\textbf{Scope:}] Crisis Management System \textbf{(\emph{SHeavy})}
-\item [\textbf{Primary Actor}:] Medical Departement, Government
-\item [\textbf{Secondary Actor}:] Medical Departement, Government
-\item [\textbf{Intention:}]A user except to common users can find people by name, by availablity or by
-his functionality and call them.
+\item [\textbf{Primary Actor}:] Every user
+\item [\textbf{Secondary Actor}:] None
+\item [\textbf{Intention:}]Find a person by name, by availablity or by his
+functionality and call them.
 \item [\textbf{Level}:]Sub-functional level
 \item [\textbf{Main~Success~Scenario}]:\\
-1. A User access the contact Menu.\\
-2. A User input the name, fonctionality and get a list of matches.\\
-3. A User can call or write a message to the specific user.\\
+1. The user has to log in.\\
+2. The user access to the contact Menu.\\
+3. The user searches for the name or fonctionality or availablity and get a list
+of matches.\\
+4. The user can call or write a message to the specific user.\\
 Extensions:\\ 
-	1.a. A common user get just access to the Call Centers lines.\\
+	2.a. A common user get just access to the Call Centers lines.\\
 }
 \end{lyxlist}
 \hrule 
@@ -76,13 +77,14 @@ Extensions:\\
 place (e.g. hospital).
 \item [\textbf{Level}:]Sub-functional level
 \item [\textbf{Main~Success~Scenario}]:\\
-1. The user access the SafePlaceFinder in the menu bar of the application.\\
-2. The user select a place to go.\\
-3. The user's GPS application opens with the route.\\
+1. The user has to log in.\\
+2. The user access the SafePlaceFinder in the menu bar of the application.\\
+3. The user select a place to go.\\
+4  SHeavy calculates the fastest way avoiding Unsafe and Danger Zones.\\
+5. The system opens the user's GPS application with the safest route.\\
 Extensions:\\
-3.a SHeavy calculates the fastest way avoiding Unsafe and Danger Zones.\\
-	3.a.1 SHeavy ignores any way through an Unsafe/Danger Zone.\\
-	3.a.2 SHeavy calculates the fastest way from the non-ignored ways.\\
+	4.a SHeavy ignores any way through an Unsafe/Danger Zone.\\
+	4.b SHeavy calculates the fastest way from the non-ignored ways.\\ 
 \item 
 }
 \end{lyxlist}
@@ -176,82 +178,28 @@ Extensions:\\
 
 \section{Coordinator procedures}
 
-\subsection{Confirm The Alert State}
+\subsection{Alert Management}
 \vspace{0.5cm}
 \hrule
 \vspace{0.5cm}
 \begin{lyxlist}{UC1}
 \small{
-\item [\textbf{Use~Case:}] TriggerAlertState
+\item [\textbf{Use~Case:}] AlertManagement
 \item [\textbf{Scope:}] Crisis Management System \textbf{(\emph{SHeavy})}
 \item [\textbf{Primary Actor}:] Coordinator
 \item [\textbf{Secondary Actor}:] Medical Departement
-\item [\textbf{Intention:}] According to the diagnostic made by the Medical
-Departement, which will be sent to the Coordinator, the Coordinator will trigger
-the alert and SHeavy will notify all users about a possible epidemic.
+\item [\textbf{Intention:}] If a epidemic breaks out the Coordinator will
+trigger the alert which is the start signal to use the CMS to handle the crisis.
 \item [\textbf{Level}:]Sub-functional level
 \item [\textbf{Main~Success~Scenario}]:\\
-1. The Doctor notice that a patient is contracting an highly infectious virus.\\
-2. The Doctor sends the report and blood samples to the Laboratory.\\
-3. The Laboratory proceed to various tests with the blood samples.\\
-4. If the risk of a possible epidemic is assesssed, a report wil be sent to
-the Coordinator.\\
-5. The Coordinstor recieves the report and trigger the alert of an epidemic.\\
-Extensions:\\
-4.a The tests shows their's no risk of epidemic and no report will be sent to
-the Coordinator.\\
+1. The Coordinator has to log in.\\
+2. The Coordinator 'Confirm The Alert State'.
+3. The Doctor 'Handling of infected patient'.
+4. The Coordinator 'Lift The Alert State'.
+5. The epidemic is over.\\
 }
 \end{lyxlist}
 \hrule 
-\vspace{0.5cm} 
-
-\subsection{Lift The Alert Atate}
-\vspace{0.5cm}
-\hrule
-\vspace{0.5cm}
-\begin{lyxlist}{UC1}
-\small{
-\item [\textbf{Use~Case:}] LiftAlertState
-\item [\textbf{Scope:}] Crisis Management System \textbf{(\emph{SHeavy})}
-\item [\textbf{Primary Actor}:] Coordinator
-\item [\textbf{Secondary Actor}:] Medical Departement
-\item [\textbf{Intention:}] According to the diagnostic made by the Medical
-Departement,which is send to the Coordinator, the Coordinator
-will lift of the epidemic and SHeavy will notify all users that the epidemic is
-over.
-\item [\textbf{Level}:]Sub-functional level
-\item [\textbf{Main~Success~Scenario}]:\\
-1. The Laboratory finds a cure for the epidemic.\\
-2. All infected persons are healed.\\
-3. The Medical Departement sends a report to the Coordinator, in which it is
-said that the epidemic is over.\\
-4. The Coordinator reads the report and according to that lift the alert.\\ 
-}
-\end{lyxlist}
-\hrule
-\vspace{0.5cm} 
-
-\subsection{Handling Ressources}
-\vspace{0.5cm}
-\hrule
-\vspace{0.5cm}
-\begin{lyxlist}{UC1}
-\small{
-\item [\textbf{Use~Case:}] OverView
-\item [\textbf{Scope:}] Crisis Management System \textbf{(\emph{SHeavy})}
-\item [\textbf{Primary Actor}:] Coordinator
-\item [\textbf{Secondary Actor}:] Medical Departement, Authorities
-\item [\textbf{Intention:}] The Coordinator gets an overview of the infected
-zone, it's infrastructures and the deployed teams.
-\item [\textbf{Level}:]Sub-functional level
-\item [\textbf{Main~Success~Scenario}]:\\
-1. The Coordinator access his webinterface.\\
-2. The Coordinator clicks on OVERVIEW in the menu.\\
-Extensions:\\
-	2.a. He can filter the information.\\
-}
-\end{lyxlist}
-\hrule
 \vspace{0.5cm} 
 
 \subsection{Mission Management}
@@ -277,11 +225,92 @@ Extensions:\\
 	1.c. The Coordinator 'Request Evacuation Mission'.\\
 	4.a. The Coordinator put the 'Set Up Checkpoint' as finished.\\
 	4.b. The Coordinator put the 'Transfer Mission' as finished.\\
-	4.c. The Coordinator put the 'Evacuation Mission' as finished.\\
-	
+	4.c. The Coordinator put the 'Evacuation Mission' as finished.\\	
 }
 \end{lyxlist}
 \hrule 
+\vspace{0.5cm} 
+
+\subsection{Confirm The Alert State}
+\vspace{0.5cm}
+\hrule
+\vspace{0.5cm}
+\begin{lyxlist}{UC1}
+\small{
+\item [\textbf{Use~Case:}] ConfirmAlert
+\item [\textbf{Scope:}] Crisis Management System \textbf{(\emph{SHeavy})}
+\item [\textbf{Primary Actor}:] Coordinator
+\item [\textbf{Secondary Actor}:] Medical Departement
+\item [\textbf{Intention:}] According to the diagnostic made by the Medical
+Departement, which will be sent to the Coordinator, the Coordinator will trigger
+the alert and SHeavy will notify all users about a possible epidemic.
+\item [\textbf{Level}:]Sub-functional level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. The Doctor notice that a patient is contracting an highly infectious virus.\\
+2. The Doctor sends the report and blood samples to the Laboratory.\\
+3. The Laboratory proceed to various tests with the blood samples.\\
+4. If the risk of a possible epidemic is assesssed, then the Doctor has to log
+in and he will send a to the Coordinator.\\
+5. The Coordinstor recieves the report and trigger the alert of an epidemic.\\
+6. The System will notify all relevant users about that.\\
+Extensions:\\
+	4.a The tests shows their's no risk of epidemic and no report will be sent to
+the Coordinator.\\
+}
+\end{lyxlist}
+\hrule 
+\vspace{0.5cm} 
+
+\subsection{Lift The Alert State}
+\vspace{0.5cm}
+\hrule
+\vspace{0.5cm}
+\begin{lyxlist}{UC1}
+\small{
+\item [\textbf{Use~Case:}] LiftAlertState
+\item [\textbf{Scope:}] Crisis Management System \textbf{(\emph{SHeavy})}
+\item [\textbf{Primary Actor}:] Coordinator
+\item [\textbf{Secondary Actor}:] Medical Departement
+\item [\textbf{Intention:}] According to the diagnostic made by the Medical
+Departement,which is send to the Coordinator, the Coordinator
+will lift of the epidemic and SHeavy will notify all users that the epidemic is
+over.
+\item [\textbf{Level}:]Sub-functional level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. The Laboratory finds a cure for the epidemic.\\
+2. All infected persons are healed.\\
+3. The Mediacl Departement has to log in.\\
+3. The Medical Departement sends a report to the Coordinator, in which it is
+said that the epidemic is over.\\
+4. The Coordinator reads the report and according to that lifts the alert.\\ 
+5. The System will notify to all relevant users that the epidemic is over.\\
+}
+\end{lyxlist}
+\hrule
+\vspace{0.5cm} 
+
+\subsection{Handling Ressources}
+\vspace{0.5cm}
+\hrule
+\vspace{0.5cm}
+\begin{lyxlist}{UC1}
+\small{
+\item [\textbf{Use~Case:}] OverView
+\item [\textbf{Scope:}] Crisis Management System \textbf{(\emph{SHeavy})}
+\item [\textbf{Primary Actor}:] Coordinator
+\item [\textbf{Secondary Actor}:] Medical Departement, Authorities
+\item [\textbf{Intention:}] The Coordinator gets an overview of the infected
+zone, it's infrastructures and the deployed teams.
+\item [\textbf{Level}:]Sub-functional level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. The Coordinator has to log in.
+2. The Coordinator access his webinterface.\\
+3. The Coordinator clicks on OVERVIEW in the menu.\\
+Extensions:\\
+	3.a. He can filter the information.\\
+}
+\end{lyxlist}
+\hrule
 \vspace{0.5cm} 
 
 \subsection{Request Set Up Camp Mission}
@@ -488,7 +517,7 @@ record of the growth of the epidemic.
 3. The Doctor sends the blood sample to the nearest laboratory in order to find
 a cure.\\
 4. The Doctor tries to stop the infection by performing several operations or
-by followinf the instruction of the Laboratory.\\
+by following the instruction of the Laboratory.\\
 }
 \end{lyxlist}
 \hrule

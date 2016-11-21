@@ -23,6 +23,26 @@ description to achieve (at least one of) its expected outcome.
 
 It might be required to include GUI screenshots to illustrate the example.\\
 
+\section{Login}
+\label{operation:Login}
+The coordinator, administrator, leaders or anyone working in the medical
+department or authorities wants to access the applications.\\
+\begin{description}
+\item \textbf{Parameters:} User Information, User Password
+\item \textbf{Precondition:} The user has the application open.
+\item \textbf{Post-condition:}  The user enters the homescreen with access to
+his individual information and functions.
+\item \textbf{Output messages:} None.
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item After opening the application the user has two textfields for accound and
+password.
+\item The user enters his accound and his password.
+\item Click on the 'Login' button and the user will be linked to the homescreen.
+\end{enumerate}
+\end{description}
+
+
 \section{Send Alert}
 \label{operation:SendAlert}
 The Medical Departement creates an alert message for an epidemic, including a
@@ -63,9 +83,33 @@ every user is notified about he epidemic.
 \begin{enumerate}
 \item The Coordinator recieves an alert notification on his web-interface. He
 has to click on 'Report' to read the report sent by the Medical Departement.
-\item According to the Coordinator's decision he'll click on 'Start Crisis
-Management' to start the crisis or 'Decline' if the situaton don't need a crisis
+\item According to the Coordinator's decision he'll click on 'Launch Crisis' to
+start the crisis, 'Delay Decision' to not decide yet if he needs confirmation of
+the governement or 'Decline' if the situaton don't need a crisis
 management system.
+\end{enumerate}
+\end{description}
+
+\section{Upgrade User to Professional status}
+\label{operation:UpgradeUser}
+In request of the coordinator, the Administrator wants to upgrade a common user
+to a professional user.\\
+\begin{description}
+\item \textbf{Parameters:} User name, Coordinator Request
+\item \textbf{Precondition:} The administrator has to be on his home screen.
+\item \textbf{Post-condition:}  The selected user gains access to the new
+feature of the system.
+\item \textbf{Output messages:} None.
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item The administrator selects or he uses the search to find and select the
+requested user in order to modify his data.
+\item The administrator selects the requested type of professonal from the
+following: Common User, Medical Department, Authorities and Coordinator.
+\item The administrator selects his subtype for the Medical Department and
+Authorities but not for the Common user and Coordinator.
+\item The system modify the information as the administrator changes the
+selectboxes.
 \end{enumerate}
 \end{description}
 

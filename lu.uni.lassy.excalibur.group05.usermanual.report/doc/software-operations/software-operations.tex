@@ -29,19 +29,41 @@ The coordinator, administrator, leaders or anyone working in the medical
 department or authorities wants to access the applications.\\
 \begin{description}
 \item \textbf{Parameters:} User Information, User Password
-\item \textbf{Precondition:} The user has the application open.
+\item \textbf{Precondition:} The user has the application open and has already
+his credentials.
 \item \textbf{Post-condition:}  The user enters the homescreen with access to
 his individual information and functions.
 \item \textbf{Output messages:} None.
 \item \textbf{Triggering:}
 \begin{enumerate}
-\item After opening the application the user has two textfields for accound and
+\item After opening the application the user has two textfields for account and
 password.
-\item The user enters his accound and his password.
+\item The user enters his account and his password.
 \item Click on the 'Login' button and the user will be linked to the homescreen.
 \end{enumerate}
 \end{description}
 
+\section{Add a new User}
+\label{operation:AddUser}
+In request of the coordinator, the Administrator adds a person as a common user or a professional user 
+to the system, allowing them to use the specific operation each type of user has.\\
+\begin{description}
+\item \textbf{Parameters:} Personal Information, User Information, Coordinator Request
+\item \textbf{Precondition:} The crisis didn't has started and the administrator
+is logged in. Furthermore, the person who the administrator is going to add
+don't has an existing account.
+\item \textbf{Post-condition:} The selected user gains access to the specific feature of the system each type of user has.
+\item \textbf{Output messages:} The user has been added to the system.
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item The administrator clicks on 'Add User' that opens the Add-User-Interface.
+\item The administrator fills in the Personal Information: Title, First Name, Last Name, Phone Number, E-mail.
+\item The administrator fills in the requested type of professional from the following: Common User, Medical Department, Authorities and Coordinator.
+\item The administrator selects his subtype for the Medical Department and Authorities but not for the Common user and Coordinator.
+\item The administrator enters the Users Team.
+\item Finally, the administrator clicks on 'Add User'.
+\end{enumerate}
+\end{description}
 
 \section{Send Alert}
 \label{operation:SendAlert}
@@ -99,19 +121,20 @@ to a professional user.\\
 \item \textbf{Precondition:} The administrator has to be on his home screen.
 \item \textbf{Post-condition:}  The selected user gains access to the new
 feature of the system.
-\item \textbf{Output messages:} None.
+\item \textbf{Output messages:} The user has been modified.
 \item \textbf{Triggering:}
 \begin{enumerate}
 \item The administrator selects or he uses the search to find and select the
 requested user in order to modify his data.
-\item The administrator selects the requested type of professonal from the
+\item The administrator selects the requested type of professional from the
 following: Common User, Medical Department, Authorities and Coordinator.
 \item The administrator selects his subtype for the Medical Department and
 Authorities but not for the Common user and Coordinator.
-\item The system modify the information as the administrator changes the
-selectboxes.
+\item The administrator enters the Users Team.
+\item The administrator clicks on ‘Update User’ to finish the operation.
 \end{enumerate}
 \end{description}
+
 
 \section{Find Safe Place}
 \label{operation:FindSafePlace}
@@ -119,7 +142,8 @@ Any user requests the safest and fastest way to a certain safe place e.g. hospit
 safe camp. The operation will send him through GPS to the selected place.\\
 \begin{description}
 \item \textbf{Parameters:} Place Information, Place Location
-\item \textbf{Precondition:} The user is logged in and has his GPS enabled.
+\item \textbf{Precondition:} The crisis is on going. The user is logged in and
+has his GPS enabled.
 \item \textbf{Post-condition:}  The fastest way to a certain safe place was
 calculated.
 \item \textbf{Output messages:} 'Route to the selected safe place is ready.'
@@ -141,7 +165,7 @@ by name or location (e.g. hospital/camp name or city they are located).\\
 \begin{description}
 \item \textbf{Parameters:} Contact Information
 \item \textbf{Precondition:} The user is logged in and has to be connected to a
-nnetwork.
+network. The crisis has already started.
 \item \textbf{Post-condition:} The application uses call the respective group or person.
 \item \textbf{Output messages:} Calling 'ContactX'
 \item \textbf{Triggering:}
@@ -159,7 +183,8 @@ figther, military, Doctors,..) with some important information concerning the
 mission.\\
 \begin{description}
 \item \textbf{Parameters:} Contact Information, Mission Information
-\item \textbf{Precondition:} The user is logged in as a professional user.
+\item \textbf{Precondition:} The user is logged in as a professional user. The
+crisis has already started.  
 \item \textbf{Post-condition:} The mission is recieved by the concerned leader.
 \item \textbf{Output messages:} 'Mission Pending'
 \item \textbf{Triggering:}
@@ -185,7 +210,8 @@ fire figther, military, Doctors,..) with some important information concerning t
 mission.\\
 \begin{description}
 \item \textbf{Parameters:} Contact Information, Mission Information
-\item \textbf{Precondition:} The user is logged in as a professional user.
+\item \textbf{Precondition:} The user is logged in as a professional user. The
+crisis has already started. 
 \item \textbf{Post-condition:} The mission is recieved by the concerned leader.
 \item \textbf{Output messages:} 'Mission Pending'
 \item \textbf{Triggering:}
@@ -211,7 +237,8 @@ figther, military, Doctors,..) with some important information concerning the
 mission.\\
 \begin{description}
 \item \textbf{Parameters:} Contact Information, Mission Information
-\item \textbf{Precondition:} The user is logged in as a professional user.
+\item \textbf{Precondition:} The user is logged in as a professional user. The
+crisis has already started. 
 \item \textbf{Post-condition:} The mission is recieved by the concerned leader.
 \item \textbf{Output messages:} 'Mission Pending'
 \item \textbf{Triggering:}
@@ -235,7 +262,8 @@ figther, military, Doctors,..) with some important information concerning the
 mission.\\
 \begin{description}
 \item \textbf{Parameters:} Contact Information, Mission Information
-\item \textbf{Precondition:} The user is logged in as a professional user.
+\item \textbf{Precondition:} The user is logged in as a professional user. The
+crisis has already started.  
 \item \textbf{Post-condition:} The mission is recieved by the concerned leader.
 \item \textbf{Output messages:} 'Mission Pending'
 \item \textbf{Triggering:}
@@ -259,7 +287,9 @@ leader can accept the mission or decline if they can't execute it.\\
 \begin{description}
 \item \textbf{Parameters:} Contact Information, Mission Information
 \item \textbf{Precondition:} The user is logged in as a professional user
-and recieves the mission notification.
+and recieves the mission notification. The crisis has already started. The
+maximum number of team needed in the mission doesn't exceed the demande. And the
+Deadline isn't reached.
 \item \textbf{Post-condition:} The mission will be executed or sent to another
 team.
 \item \textbf{Output messages:} The mission is Accepted or Transfer.
@@ -274,7 +304,7 @@ the mission zone.
 \item After accepting the mission he gets a confirmation notification. He can
 quit it by clicking on 'OK'.
 \end{enumerate}
-\end{description} 
+\end{description}  
 
 \section{Add New Zone}
 \label{operation:AddNewZoneS}
@@ -282,7 +312,8 @@ The Coordinator can add new zones to the map. According to that the map will
 be updated.\\
 \begin{description}
 \item \textbf{Parameters:} Epidemic Information, Change State
-\item \textbf{Precondition:} The user is logged in as a professional user.
+\item \textbf{Precondition:} The user is logged in as a professional user. The
+crisis has already started. The zone to add doesn't exists.
 \item \textbf{Post-condition:} A new zone was added to the map.
 \item \textbf{Output messages:} 'Updated'
 \item \textbf{Triggering:}
@@ -304,7 +335,8 @@ The Coordinator can change a zone's propreties in any time. According
 to that the map will be updated.\\
 \begin{description}
 \item \textbf{Parameters:} Epidemic Information, Change State
-\item \textbf{Precondition:} The user is logged in as a professional user.
+\item \textbf{Precondition:} The user is logged in as a professional user. The
+crisis has already started. The relevant zone exists.
 \item \textbf{Post-condition:} An existing zone was modified on the map.
 \item \textbf{Output messages:} 'Updated'
 \item \textbf{Triggering:}
@@ -325,7 +357,8 @@ The Coordinator can delete a zone in any time. According
 to that the map will be updated.\\
 \begin{description}
 \item \textbf{Parameters:} Epidemic Information, Change State
-\item \textbf{Precondition:} The user is logged in as a professional user.
+\item \textbf{Precondition:} The user is logged in as a professional user. The
+crisis has already started. The Zone exists.
 \item \textbf{Post-condition:} An existing zone was deleted on the map.
 \item \textbf{Output messages:} 'Updated'
 \item \textbf{Triggering:}
@@ -346,7 +379,8 @@ request material needs or support by a resource team. The user has to describe
 the needs in the corresponding window.\\
 \begin{description}
 \item \textbf{Parameters:} Needs Information, Needs Request
-\item \textbf{Precondition:} The user has to be logged in as professional.
+\item \textbf{Precondition:} The user has to be logged in as professional. The
+crisis has already started.
 \item \textbf{Post-condition:}  The request is send to the corresponding groups.
 \item \textbf{Output messages:} None
 \item \textbf{Triggering:}

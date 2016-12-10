@@ -26,14 +26,14 @@ It might be required to include GUI screenshots to illustrate the example.\\
 \section{Login}
 \label{operation:Login}
 The coordinator, administrator, leaders or anyone working in the medical
-department or authorities wants to access the applications.\\
+department or authorities who wants to access the applications.\\
 \begin{description}
 \item \textbf{Parameters:} User Information, User Password
 \item \textbf{Precondition:} The user has the application open and has already
 his credentials.
 \item \textbf{Post-condition:}  The user enters the homescreen with access to
 his individual information and functions.
-\item \textbf{Output messages:} None.
+\item \textbf{Output messages:} 'Login successfully'
 \item \textbf{Triggering:}
 \begin{enumerate}
 \item After opening the application the user has two textfields for account and
@@ -43,7 +43,25 @@ password.
 \end{enumerate}
 \end{description}
 
-\section{Add a new User}
+\section{Logout}
+\label{operation:Logout}
+The coordinator, administrator, leaders or anyone working in the medical
+department or authorities who wants to quit the applications.\\
+\begin{description}
+\item \textbf{Parameters:} User Information, User Password
+\item \textbf{Precondition:} The user is already logged in.
+\item \textbf{Post-condition:}  The user can't no longer access to his personal
+functions proposed by SHeavy.
+\item \textbf{Output messages:} 'Logout successfully'
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item The user is logged in.
+\item The user clicks on 'Logout' at the corner of the application.
+\item The user isn't no longer logged in.
+\end{enumerate}
+\end{description}
+
+\section{Insertion Into Database}
 \label{operation:AddUser}
 In request of the coordinator, the Administrator adds a person as a common user or a professional user 
 to the system, allowing them to use the specific operation each type of user has.\\
@@ -65,8 +83,8 @@ don't has an existing account.
 \end{enumerate}
 \end{description}
 
-\section{Send Alert}
-\label{operation:SendAlert}
+\section{Trigger Alert}
+\label{operation:TriggerAlert}
 The Medical Departement creates an alert message for an epidemic, including a
 report of what happened and what should be done as a reaction of that epidemic.
 He's sending it to the Coordinator who will read it and confirm the alert
@@ -112,32 +130,27 @@ management system.
 \end{enumerate}
 \end{description}
 
-\section{Upgrade User to Professional status}
+\section{Delete User}
 \label{operation:UpgradeUser}
-In request of the coordinator, the Administrator wants to upgrade a common user
-to a professional user.\\
+In request of the coordinator, the Administrator wants to delete a user.\\
 \begin{description}
 \item \textbf{Parameters:} User name, Coordinator Request
 \item \textbf{Precondition:} The administrator has to be on his home screen.
-\item \textbf{Post-condition:}  The selected user gains access to the new
-feature of the system.
-\item \textbf{Output messages:} The user has been modified.
+\item \textbf{Post-condition:}  The selected user will be deleted from the
+database.
+\item \textbf{Output messages:} 'User deleted'
 \item \textbf{Triggering:}
 \begin{enumerate}
 \item The administrator selects or he uses the search to find and select the
-requested user in order to modify his data.
-\item The administrator selects the requested type of professional from the
-following: Common User, Medical Department, Authorities and Coordinator.
-\item The administrator selects his subtype for the Medical Department and
-Authorities but not for the Common user and Coordinator.
-\item The administrator enters the Users Team.
-\item The administrator clicks on ‘Update User’ to finish the operation.
+requested user.
+\item The administrator clicks on 'Delete User' to finish the operation.
+\item The user was successfully removed from the database.
 \end{enumerate}
 \end{description}
 
 
-\section{Find Safe Place}
-\label{operation:FindSafePlace}
+\section{Safe Place Finder}
+\label{operation:SafePlaceFinder}
 Any user requests the safest and fastest way to a certain safe place e.g. hospital,
 safe camp. The operation will send him through GPS to the selected place.\\
 \begin{description}
@@ -157,11 +170,11 @@ clicking on the one the user wants to request the route and send the Place Infor
 \end{enumerate}
 \end{description}
 
-\section{Urgency Call}
-\label{operation:UrgencyCall}
-Any professional user requests a call to a specific group in a certain location by selecting 
-them in the contact list or using the search to find the group (medics, fireman, military) 
-by name or location (e.g. hospital/camp name or city they are located).\\
+\section{Find Person}
+\label{operation:FindPerson}
+Any professional user who requests a call to a specific group in a certain
+location.Can find them by selecting them in the contact list or using the search
+to find the group (medics, fireman, military) by name or location (e.g. hospital/camp name or city they are located).\\
 \begin{description}
 \item \textbf{Parameters:} Contact Information
 \item \textbf{Precondition:} The user is logged in and has to be connected to a
@@ -176,8 +189,8 @@ network. The crisis has already started.
 \end{enumerate}
 \end{description} 
 
-\section{Set Camp Mission}
-\label{operation:SetCampMission}
+\section{Send Mission Set Camp}
+\label{operation:SetCamp}
 The Coordinator sends set camp mission to various groups leaders (e.g. fire
 figther, military, Doctors,..) with some important information concerning the
 mission.\\
@@ -203,8 +216,8 @@ needed there.
 \end{enumerate}
 \end{description}
 
-\section{Set Checkpoint Mission}
-\label{operation:CheckpointMission}
+\section{Send Mission Set Checkpoint}
+\label{operation:Checkpoint}
 The Coordinator sends set checkpoint mission to various groups leaders (e.g.
 fire figther, military, Doctors,..) with some important information concerning the
 mission.\\
@@ -230,8 +243,8 @@ are going to be moved.
 \end{enumerate}
 \end{description} 
 
-\section{Transfer Mission}
-\label{operation:TransferMission}
+\section{Send Mission Transfer}
+\label{operation:Transfer}
 The Coordinator sends transfer mission to various groups leaders (e.g. fire
 figther, military, Doctors,..) with some important information concerning the
 mission.\\
@@ -255,8 +268,8 @@ to be moved.
 \end{enumerate}
 \end{description}
 
-\section{Evacuation Mission}
-\label{operation:EvacuateMission}
+\section{Send Mission Evacuation}
+\label{operation:Evacuate}
 The Coordinator sends evacuation mission to various groups leaders (e.g. fire
 figther, military, Doctors,..) with some important information concerning the
 mission.\\
@@ -306,8 +319,8 @@ quit it by clicking on 'OK'.
 \end{enumerate}
 \end{description}  
 
-\section{Add New Zone}
-\label{operation:AddNewZoneS}
+\section{Add Zone}
+\label{operation:AddZone}
 The Coordinator can add new zones to the map. According to that the map will
 be updated.\\
 \begin{description}
@@ -370,30 +383,8 @@ or searches for the name of the zone.
 \item Click on the 'Delete Zone' button to delete the zone or click on the
 'Cancel Change' button to quit.
 \end{enumerate}
-\end{description} 
+\end{description}   
 
-\section{Requirements}
-\label{operation:Requirements}
-The professional user (medical department, authorities) can
-request material needs or support by a resource team. The user has to describe
-the needs in the corresponding window.\\
-\begin{description}
-\item \textbf{Parameters:} Needs Information, Needs Request
-\item \textbf{Precondition:} The user has to be logged in as professional. The
-crisis has already started.
-\item \textbf{Post-condition:}  The request is send to the corresponding groups.
-\item \textbf{Output messages:} None
-\item \textbf{Triggering:}
-\begin{enumerate}
-\item Click on menu, then resource and then on needs.
-\item The user has to fill out the Needs Information that is the selection of
-the receiver, as well as the description of the needs.
-\item The user has to indicate his location to add a verification of the needs. 
-\item After filling in, click on 'Send' to notify the resource teams of your
-request.
-\item The user will be notify after the receiver confirms the request. 
-\end{enumerate}
-\end{description}
 
 
 

@@ -96,35 +96,18 @@ interface.
 The Medical Departement has two main groups, namely Doctors and the Laboratory.
 Each one is connected with each other and they are exchanging their reports. The
 Medical Departement is the intermediate between its groups and the Coordinator.
+They'll work together in order to find a cure. Furthermore they'll try to reduce
+the number of infected persons by delivering some guidelines to avoid being
+infected.
 \begin{description}
- \item[$\bullet$] Sends an alert of a possible epidemic to the Coordinator.
- \item[$\bullet$] Sends several reports to the Coordinator.
-\end{description} 
-
-\subsubsection{Doctors}
-Doctors are in charge of taking care of the infected victims. They'll also
-perform check ups and send reports and blood sample to the Laboratory.
-\begin{description}
- \item[$\bullet$] Write reports that will be sent to the Laboratory and Medical
- Departement.
+ \item[$\bullet$] Recognize a possible epidemic and report it to the
+ Coordinator.
  \item[$\bullet$] Works in various check points or hospitals in order to perfom
  check ups.
  \item[$\bullet$] Take care of the infected patients the time that an antivirus
  is found.
- \item[$\bullet$] Takes blood sample from the infected patients and sends them
- to the Laboratory.
-\end{description} 
-
-\subsubsection{Laboratory}
-The Laboratory is a medical group which goal is to find a cure against the
-virus. In constant collaboration with different medical chiefs they will get
-relevant information of the evolution of the epidemic in realtime. They also get the
-blood samples and reports from the Doctors.
-\begin{description}
- \item[$\bullet$] Write reports that will be sent to the Doctors and Medical
- Departement.
- \item[$\bullet$] Analizing the blood samples to isolate the virus and demantle
- its structure to provide an antivirus.
+ \item[$\bullet$] Takes blood sample from the infected patients and analyze
+ them in order to find a cure.
  \item[$\bullet$] Gives a guideline to the application as a news so that all the
  people knows how to protect itself from become infected.
 \end{description} 
@@ -139,13 +122,15 @@ groups and the Coordinator.
 \end{description}
 
 \subsubsection{Team Leader}
-Team Leader are present in all instances of epartements such as Medical
+Team Leader are present in all instances of Departements such as Medical
 Departements and Authorities. They are the leader of an intervention group which
-is going to execute missions given by the Coordinator.
+is going to execute missions given by the Coordinator. A Departement consists of
+multiple team leader.
 \begin{description}
  \item[$\bullet$] They are responsable of his team.
  \item[$\bullet$] Accept or decline a mission given by the Coordinator.
  \item[$\bullet$] Execute missions.
+ \item[$\bullet$] Reports the mission to the Coordinator.
 \end{description}
 
 \subsection{Operating environment}
@@ -191,11 +176,6 @@ RAM & 32 GB \\
 \end{tabular}
 
 \section{Document structure}  
-Information on how this document is organised and it is expected to be
-used. Recommendations on which members of the audience
-should consult which sections of the document, and explanations about the used
-notation (i.e. description of formats and conventions) must also be provided.\\
-
 You will find in chapter one all the necessary and general information to be properly introduced
 to the system we develop. Chapter two includes more detailed materials covering the main
 use-cases we implements, involving actors and basic technical details. Chapter three is set

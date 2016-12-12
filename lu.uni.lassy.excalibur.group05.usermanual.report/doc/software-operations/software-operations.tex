@@ -2,26 +2,13 @@
 \label{chap:soptware_operations}
 
 
-Explain each allowed software operations (i.e. an atomic unit of treatment, a service, a functionality) including a brief description of the operation, required parameters, optional parameters, default options, required steps to trigger the operation, assumptions upon request of the operation and expected results of executing such operation.
-Describe how to recognise that the operation has successfully been executed or
-abnormally terminated. The template given below (i.e. section \ref{operation:MyOperation} has to be used).
-
-Group the operations devoted to the needs of specific actors. Common
-operations to several actors may be grouped and presented once to avoid redundancy.
-
-
-\section{MyOperation}
-\label{operation:MyOperation}
-The system operator creates and adds a new crisis to the system after being
-informed by a third party (citizen, organization) and selects a crisis handler for the crisis.
- 
-\subsection{MyExample1}
-Examples should illustrate the use of \textbf{complex operations}.
-
-Each example must show how the actor uses the software operation under
-description to achieve (at least one of) its expected outcome.
-
-It might be required to include GUI screenshots to illustrate the example.\\
+This chapter explains each allowed software operations (i.e. an atomic
+unit of treatment, a service, a functionality) including a brief description of 
+the operation, required parameters, optional parameters, default options, 
+required steps to trigger the operation, assumptions upon request of the
+operation  and expected results of executing such operation.
+It describes how to recognise that the operation has successfully been executed
+or abnormally terminated. 
 
 \section{Login}
 \label{operation:Login}
@@ -384,6 +371,109 @@ or searches for the name of the zone.
 'Cancel Change' button to quit.
 \end{enumerate}
 \end{description}   
+
+\section{Alert GPS Zone}
+\label{operation:AlertGPSZone}
+The System alerts the user if he's entering in a zone such as a dangerous zone
+or quarantine zone. The System has to know where the user is. For this
+puropose the application sends the GPS location to the system several times.\\
+\begin{description}
+\item \textbf{Parameters:} GPS Locations, Zones in the Map 
+\item \textbf{Precondition:} The user is logged in and the
+crisis has already started. The user has his GPS enabled and is operational.
+\item \textbf{Post-condition:} The user knows he's nearby a zone and can avoid
+it. The applications has sent the user's GPS location to the System.
+\item \textbf{Output messages:} 'You are entering in a Danger Zone'
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item The Application sends the GPS Location to the System several times per 5
+minutes range.
+\item The System knows locally where's the danger zones and so warns the user
+whem entering in a Zone.
+\item When entering in a Zone a Warning will pop up cand you have the choice to
+enable the mute again.
+\end{enumerate}
+\end{description}   
+
+\section{Forgot Password}
+\label{operation:ForgotPassword}
+It might be that the a professional user can't remember his credentials
+anymore. He has the possibility to get new credentials from the administrator.\\
+\begin{description}
+\item \textbf{Parameters:}  Email associated to the account
+\item \textbf{Precondition:} The user's email is associated with his lost
+account.
+\item \textbf{Post-condition:} The user gets new credentials in his mail.
+\item \textbf{Output messages:} 'Reset credentials was sent by email to your
+email.'
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item The professional user has to click on 'Forgot your password?' on the Login
+Screen.
+\item The professional user has to write his email in the textfield.
+\item The professional user clicks on 'Send' to get his new credentials.
+\end{enumerate}
+\end{description}   
+
+\section{Send Exact Amount of People}
+\label{operation:ExactAmount}
+The Coordinator sends missions normally with an estimation of people to
+evacuate or transfer. After the mission the Team leader who accepted the
+mission can send the exact amount of people to the Coordnator\\
+\begin{description}
+\item \textbf{Parameters:} Amount of People , Type of Mission
+\item \textbf{Precondition:} The user is logged in as a professional user. The
+crisis has already started. The Team Leader accepted the mission and will
+execute it. Afterwards the teamleader send the amount of people to save.
+\item \textbf{Post-condition:} The right amount was sent and modified.
+\item \textbf{Output messages:} 'Changes submited'
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item The Team Leader has to open the 'Mission-view'.
+\item The Team Leader has to select the current mission.
+\item The Team Leader can modify the amount of people.
+\item The Team Leader has to click on 'Send' to send the right amount to the
+Coordinator.
+\end{enumerate}
+\end{description}   
+
+\section{Get All Zones}
+\label{operation:Get All Zones}
+The Application retrieves a Collection of zones from the System to get all zones
+locally stored.
+\begin{description}
+\item \textbf{Parameters:} None
+\item \textbf{Precondition:} The System needs an internet connection and the
+crisis has already started.
+\item \textbf{Post-condition:} All zones are represented on the map.
+\item \textbf{Output messages:} None
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item The user has to open the 'Map-view'.
+\item The Application will retrieve all zones automatically.
+\item All Zones are represented in the map.
+\end{enumerate}
+\end{description}  
+
+\section{See Affected Team to Mission}
+\label{operation:TeamToMission}
+The Coordinator wants to see which teams are linked with whch mission.
+\begin{description}
+\item \textbf{Parameters:} Missions
+\item \textbf{Precondition:} The user is logged in and the
+crisis has already started. There are some mission in going and teams affected
+to it.
+\item \textbf{Post-condition:} Teams linked with the selected Mission are
+shown.
+\item \textbf{Output messages:} None
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item The Coordinator opens the 'Overview-screen'.
+\item The Coordinator clicks on 'Mission'.
+\item A list with all relevant information will appear next the map.
+\end{enumerate}
+\end{description}  
+
 
 
 

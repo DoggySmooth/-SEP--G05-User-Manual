@@ -24,7 +24,7 @@ his individual information and functions.
 \item \textbf{Triggering:}
 \begin{enumerate}
 \item After opening the application the user has two textfields for account and
-password.
+password \ref{fig:A0}.
 \item The user enters his account and his password.
 \item Click on the 'Login' button and the user will be linked to the homescreen.
 \end{enumerate}
@@ -43,7 +43,8 @@ functions proposed by SHeavy.
 \item \textbf{Triggering:}
 \begin{enumerate}
 \item The user is logged in.
-\item The user clicks on 'Logout' at the corner of the application.
+\item The user clicks on 'Logout' at the corner of the application.\ref{fig:A12}
+\item The user has to confirm it again.
 \item The user isn't no longer logged in.
 \end{enumerate}
 \end{description}
@@ -61,7 +62,8 @@ don't has an existing account.
 \item \textbf{Output messages:} The user has been added to the system.
 \item \textbf{Triggering:}
 \begin{enumerate}
-\item The administrator clicks on 'Add User' that opens the Add-User-Interface.
+\item The administrator clicks on 'Add User' that opens the
+Add-User-Interface \ref{fig:W10}.
 \item The administrator fills in the Personal Information: Title, First Name, Last Name, Phone Number, E-mail.
 \item The administrator fills in the requested type of professional from the following: Common User, Medical Department, Authorities and Coordinator.
 \item The administrator selects his subtype for the Medical Department and Authorities but not for the Common user and Coordinator.
@@ -85,8 +87,8 @@ Coordinator was notified about the alert.
 \item \textbf{Output messages:} 'Alert sent'.
 \item \textbf{Triggering:}
 \begin{enumerate}
-\item In the alert message window, the professional user fills out the alert
-information: the title and the description text-fields.
+\item In the alert message window, the professional user fills out
+the alert information: the title and the description text-fields.
 \item The message has to have an report as well as indicating the state of the
 alert if needed.
 \item Click on the 'Send' button and the Coordinator will be notified of the
@@ -108,12 +110,41 @@ every user is notified about he epidemic.
 \item \textbf{Output messages:} 'Epidemic confirmed'.
 \item \textbf{Triggering:}
 \begin{enumerate}
-\item The Coordinator recieves an alert notification on his web-interface. He
-has to click on 'Report' to read the report sent by the Medical Departement.
-\item According to the Coordinator's decision he'll click on 'Launch Crisis' to
-start the crisis, 'Delay Decision' to not decide yet if he needs confirmation of
-the governement or 'Decline' if the situaton don't need a crisis
-management system.
+\item The Coordinator recieves an alert notification on his web-interface
+\ref{fig:W3}. He has to click on 'Open' to read the report sent by the Medical
+Departement.
+\item The Coordinator clicks on 'Launch Crisis'\ref{fig:W4}. to start the
+crisis.
+\item The Coordinator clicks on 'Delay Decision'\ref{fig:W4}. to responde
+later.
+\item The Coordinator clicks on 'Decline'\ref{fig:W4}. if there's no sign of a
+dangerous epidemic.
+\end{enumerate}
+\end{description}
+
+\section{Lift Alert}
+\label{operation:LiftAlert}
+The Coordinator recieves the confirmation that the cure was fund and is
+working. The infected persons are reducing rapidly. Only few minoor victims
+are left but the normal cycle of life can flow again. The Coordinator Lift the
+Alert because the alert is over.\\
+\begin{description}
+\item \textbf{Parameters:} Alert Information, User and State Information
+\item \textbf{Precondition:} The user is logged in as professional user and
+a crisis is on going.
+\item \textbf{Post-condition:} End of the CMS. The alert is lifted.
+\item \textbf{Output messages:} 'Epidemic over'.
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item The Coordinator recieves a notification on his web-interface.
+ from the Medical Departement. He has to click on 'Open' to read
+the report sent by the Medical Departement.
+\item The Coordinator konws that the epidemic is over. He clicks on 'Finish
+Crisis' located in the 'Home Screen'\ref{fig:W2}.
+\item The Coordinator clicks on 'Stop the Crisis'\ref{fig:We16}.
+\item The Coordinator has to confirm his decision and has to click again on
+'Stop the Crisis'\ref{fig:We17}.
+\item The Alert is lifted and the CMS will be deactivated.
 \end{enumerate}
 \end{description}
 
@@ -128,9 +159,10 @@ database.
 \item \textbf{Output messages:} 'User deleted'
 \item \textbf{Triggering:}
 \begin{enumerate}
-\item The administrator selects or he uses the search to find and select the
+\item The administrator selects or uses the search to find and select the
 requested user.
-\item The administrator clicks on 'Delete User' to finish the operation.
+\item The administrator clicks on 'Delete User'\ref{fig:W22} to finish the
+operation.
 \item The user was successfully removed from the database.
 \end{enumerate}
 \end{description}
@@ -149,7 +181,7 @@ calculated.
 \item \textbf{Output messages:} 'Route to the selected safe place is ready.'
 \item \textbf{Triggering:}
 \begin{enumerate}
-\item In the menu the user clicks on 'Safe Place Finder'.
+\item In the menu the user clicks on 'Safe Place Finder'\ref{fig:A8}.
 \item A new window shows a list of safe places and the user choses one by 
 clicking on the one the user wants to request the route and send the Place Information to SHeavy.
 \item SHeavy send back the Place Location which includes the actual location as well as the safest route.
@@ -170,9 +202,8 @@ network. The crisis has already started.
 \item \textbf{Output messages:} Calling 'ContactX'
 \item \textbf{Triggering:}
 \begin{enumerate}
-\item Open the 'Contacts'-menu.
+\item Open the 'Contacts'-menu\ref{fig:A5}.
 \item Searchs for the person to call.
-\item Click on 'Call' to request a call to the person or group.
 \end{enumerate}
 \end{description} 
 
@@ -189,7 +220,7 @@ crisis has already started.
 \item \textbf{Output messages:} 'Mission Pending'
 \item \textbf{Triggering:}
 \begin{enumerate}
-\item The Coordinator opens the 'Mission-view'.
+\item The Coordinator opens the 'Mission-view'\ref{fig:W13}.
 \item Select one or more teams by selecting a leader in the 'send to' field or
 sends to all by clicking on 'Send to All'.
 \item Writes the title and select 'Set Camp' as type by clicking on 'Set
@@ -216,7 +247,7 @@ crisis has already started.
 \item \textbf{Output messages:} 'Mission Pending'
 \item \textbf{Triggering:}
 \begin{enumerate}
-\item The Coordinator opens the 'Mission-view'.
+\item The Coordinator opens the 'Mission-view'\ref{fig:W13}.
 \item Select one or more teams by selecting a leader in the 'send to' field or
 sends to all by clicking on 'Send to All'.
 \item Writes the title and select 'Set Checkpoint' as type by clicking on 'Set
@@ -243,7 +274,7 @@ crisis has already started.
 \item \textbf{Output messages:} 'Mission Pending'
 \item \textbf{Triggering:}
 \begin{enumerate}
-\item The Coordinator opens the 'Mission-view'.
+\item The Coordinator opens the 'Mission-view'\ref{fig:W13}.
 \item Select one or more teams by selecting a leader in the 'send to' field or
 sends to all by clicking on 'Send to All'.
 \item Writes the title and select 'Transfer People' as type by clicking on 'Set
@@ -268,7 +299,7 @@ crisis has already started.
 \item \textbf{Output messages:} 'Mission Pending'
 \item \textbf{Triggering:}
 \begin{enumerate}
-\item The Coordinator opens the 'Mission-view'.
+\item The Coordinator opens the 'Mission-view'\ref{fig:W13}.
 \item Select one or more teams by selecting a leader in the 'send to' field or
 sends to all by clicking on 'Send to All'.
 \item Writes the title and select 'Evacuate' as type by clicking on 'Set
@@ -283,24 +314,48 @@ lately.
 \section{Accept Mission}
 \label{operation:AcceptMission}
 Each group member can recieve a mission from the Coordinator. But only the
-leader can accept the mission or decline if they can't execute it.\\
+leader can accept the mission.\\
 \begin{description}
 \item \textbf{Parameters:} Contact Information, Mission Information
 \item \textbf{Precondition:} The user is logged in as a professional user
 and recieves the mission notification. The crisis has already started. The
 maximum number of team needed in the mission doesn't exceed the demande. And the
 Deadline isn't reached.
-\item \textbf{Post-condition:} The mission will be executed or sent to another
-team.
-\item \textbf{Output messages:} The mission is Accepted or Transfer.
+\item \textbf{Post-condition:} The mission will be executed.
+\item \textbf{Output messages:} 'Mission Accepted'
 \item \textbf{Triggering:}
 \begin{enumerate}
-\item The team leader recieves a mission.
+\item The team leader recieves a mission\ref{fig:A14}.
 \item He can click on 'Details' to get further information or decline
 immimediately.
 \item By clickin ont 'Extras' he get information about other teams present in
 the mission zone.
-\item He can click on 'Accept' or 'Decline'
+\item The Team leader clicks on 'Accept'.
+\item After accepting the mission he gets a confirmation notification. He can
+quit it by clicking on 'OK'.
+\end{enumerate}
+\end{description}  
+
+\section{Decline Mission}
+\label{operation:DeclineMission}
+Each group member can recieve a mission from the Coordinator. But only the
+leader can decline it if they can't execute it.\\
+\begin{description}
+\item \textbf{Parameters:} Contact Information, Mission Information
+\item \textbf{Precondition:} The user is logged in as a professional user
+and recieves the mission notification. The crisis has already started. The
+maximum number of team needed in the mission doesn't exceed the demande. And the
+Deadline isn't reached.
+\item \textbf{Post-condition:} The mission will be sent to another team.
+\item \textbf{Output messages:} 'Mission Declined'.
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item The team leader recieves a mission\ref{fig:W14}.
+\item He can click on 'Details' to get further information or decline
+immimediately.
+\item By clickin ont 'Extras' he get information about other teams present in
+the mission zone.
+\item The Team Leader clicks on 'Decline'
 \item After accepting the mission he gets a confirmation notification. He can
 quit it by clicking on 'OK'.
 \end{enumerate}
@@ -318,7 +373,7 @@ crisis has already started. The zone to add doesn't exists.
 \item \textbf{Output messages:} 'Updated'
 \item \textbf{Triggering:}
 \begin{enumerate}
-\item The Coordinator opens the 'Map Editor-view'.
+\item The Coordinator opens the 'Map Editor-view'\ref{fig:W10}.
 \item He has to click on the 'Add Zone' label to add a new Zone.
 \item He has to select a Type of zone by clicking on 'Choose Type'.
 \item The Coordinator select the visibility type.
@@ -341,7 +396,7 @@ crisis has already started. The relevant zone exists.
 \item \textbf{Output messages:} 'Updated'
 \item \textbf{Triggering:}
 \begin{enumerate}
-\item The Coordinator opens the 'Map Editor-view'.
+\item The Coordinator opens the 'Map Editor-view'\ref{fig:W11}.
 \item He has to click on the 'Set Zone' label to change a Zone.
 \item At first he has to select the zone by clicking on 'Select a Zone' button
 or searches for the name of the zone.
@@ -363,7 +418,7 @@ crisis has already started. The Zone exists.
 \item \textbf{Output messages:} 'Updated'
 \item \textbf{Triggering:}
 \begin{enumerate}
-\item The Coordinator opens the 'Map Editor-view'.
+\item The Coordinator opens the 'Map Editor-view'\ref{fig:W11}.
 \item He has to click on the 'Set Zone' label to change a zone.
 \item At first he has to select the zone by clicking on 'Select a Zone' button
 or searches for the name of the zone.
@@ -409,8 +464,9 @@ email.'
 \item \textbf{Triggering:}
 \begin{enumerate}
 \item The professional user has to click on 'Forgot your password?' on the Login
-Screen.
-\item The professional user has to write his email in the textfield.
+Screen \ref{fig:W0}.
+\item The professional user has to write his email in the textfield
+\ref{fig:W1}.
 \item The professional user clicks on 'Send' to get his new credentials.
 \end{enumerate}
 \end{description}   
@@ -429,11 +485,11 @@ execute it. Afterwards the teamleader send the amount of people to save.
 \item \textbf{Output messages:} 'Changes submited'
 \item \textbf{Triggering:}
 \begin{enumerate}
-\item The Team Leader has to open the 'Mission-view'.
+\item The Team Leader has to open the 'Mission-view'\ref{fig:A14}.
 \item The Team Leader has to select the current mission.
 \item The Team Leader can modify the amount of people.
-\item The Team Leader has to click on 'Send' to send the right amount to the
-Coordinator.
+\item The Team Leader has to click on 'Send'\ref{fig:A16} to send the right
+amount to the Coordinator.
 \end{enumerate}
 \end{description}   
 
@@ -449,7 +505,7 @@ crisis has already started.
 \item \textbf{Output messages:} None
 \item \textbf{Triggering:}
 \begin{enumerate}
-\item The user has to open the 'Map-view'.
+\item The user has to open the 'Map-view'\ref{fig:A7}.
 \item The Application will retrieve all zones automatically.
 \item All Zones are represented in the map.
 \end{enumerate}
@@ -468,7 +524,7 @@ shown.
 \item \textbf{Output messages:} None
 \item \textbf{Triggering:}
 \begin{enumerate}
-\item The Coordinator opens the 'Overview-screen'.
+\item The Coordinator opens the 'Overview-screen'\ref{fig:W7}.
 \item The Coordinator clicks on 'Mission'.
 \item A list with all relevant information will appear next the map.
 \end{enumerate}
